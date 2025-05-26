@@ -35,3 +35,14 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
+
+/* Übersetzte Textzeilen direkt unter gesprochenem Text */
+.translation {
+  color: #81d4fa;           /* Gleiche Farbe wie gesprochen */
+  font-style: italic;
+  display: block;
+  margin-top: -0.4rem;
+  margin-bottom: 1.4rem;
+  font-size: 1rem;
+  text-align: left;
+}
