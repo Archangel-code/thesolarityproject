@@ -1,10 +1,6 @@
 backend:
-  name: github
-  repo: Archangel-code/thesolarityproject
+  name: git-gateway
   branch: main
-  auth_scope: repo
-  base_url: https://thesolarityproject.netlify.app
-  auth_endpoint: api/auth
 
 media_folder: "uploads"
 public_folder: "/uploads"
