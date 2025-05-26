@@ -36,9 +36,9 @@ footer {
   color: #555;
 }
 
-/* Übersetzte Textzeilen direkt unter gesprochenem Text */
+.spoken,
 .translation {
-  color: #81d4fa;           /* Gleiche Farbe wie gesprochen */
+  color: #81d4fa;
   font-style: italic;
   display: block;
   margin-top: -0.4rem;
