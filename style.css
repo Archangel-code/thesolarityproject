@@ -95,7 +95,8 @@ body.chapter-page {
 /* Zentrierter Coming-Soon-Inhalt für Kapitel 2 */
 .coming-soon {
   text-align: center;
-  margin-top: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
   font-size: 1.1rem;
   color: #e0e0e0;
 }
