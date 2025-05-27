@@ -27,7 +27,7 @@ h1 {
 }
 
 .translation {
-  color: #81d4fa; /* gleiche Farbe wie spoken */
+  color: #81d4fa;
   font-style: italic;
   display: block;
   margin-top: -0.4rem;
@@ -39,4 +39,3 @@ h1 {
 .spoken {
   color: #81d4fa;
 }
-
