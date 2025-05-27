@@ -16,16 +16,6 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.back-link {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: #81d4fa;
-  font-family: Calibri, sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-}
-
 .spoken {
   color: #81d4fa;
   font-style: italic;
@@ -49,29 +39,30 @@ h1 {
   margin: 2rem 0;
 }
 
+/* --- NEU: Navigationsbuttons oben links --- */
 .chapter-nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 3rem auto 0;
-  max-width: 800px;
-  padding: 0 2rem;
+  gap: 10px;
+  z-index: 10;
 }
 
 .nav-button {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
+  padding: 0.5rem 1rem;
   background-color: #1e1e1e;
   color: #81d4fa;
   border: 1px solid #81d4fa;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s, color 0.3s;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
 }
 
 .nav-button:hover {
   background-color: #81d4fa;
   color: #0e0e0e;
 }
-
