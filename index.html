@@ -1,67 +1,35 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: url("solarity_cover.png") no-repeat center center fixed;
-  background-size: cover;
-  font-family: Calibri, sans-serif;
-  color: #e0e0e0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  text-align: center;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solarity – Work in Progress</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-body * {
-  text-shadow: 1px 1px 3px #000;
-}
+  <!-- Navigation oben links -->
+  <div class="chapter-nav">
+    <a href="solarity_chapter1.html" class="nav-button">« Chapter 1</a>
+    <a href="solarity_chapter2.html" class="nav-button">« Chapter 2</a>
+  </div>
 
-h1 {
-  font-size: 3rem;
-  color: #81d4fa;
-  margin-bottom: 0.5rem;
-}
+  <!-- Hauptüberschrift -->
+  <header>
+    <h1>Solarity</h1>
+    <p class="subtitle">Work in Progress</p>
+  </header>
 
-.subtitle {
-  font-size: 1.3rem;
-  color: #ffffff;
-  margin-bottom: 2rem;
-}
+  <!-- Bild im Hintergrund (bereits über CSS gesetzt) -->
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 thesolarityproject.art</p>
+  </footer>
 
-.chapter-nav {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-}
-
-.nav-button {
-  padding: 0.6rem 1.2rem;
-  background-color: rgba(17, 17, 17, 0.6);
-  color: #81d4fa;
-  border: 1px solid #81d4fa;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.nav-button:hover {
-  background-color: #81d4fa;
-  color: #0e0e0e;
-}
-
-main img.cover {
-  display: none;
-}
-
-footer {
-  font-size: 0.8rem;
-  color: #cccccc;
-  text-shadow: none;
-  margin-top: 2rem;
-}
+  <!-- Disclaimer -->
+  <p class="disclaimer">
+    Solarity is a non-commercial fan project. It may include characters, universes, or elements from various copyrighted works.
+  </p>
+</body>
+</html>
