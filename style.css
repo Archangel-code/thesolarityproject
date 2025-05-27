@@ -1,34 +1,7 @@
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
   padding: 0;
-  font-family: Calibri, sans-serif;
-}
-
-footer {
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 0.8rem;
-  color: #cccccc;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .nav-button {
-    font-size: 0.85rem;
-    padding: 0.5rem 1rem;
-  }
 }
 
 .chapter-nav {
@@ -36,8 +9,8 @@ h1 {
   top: 20px;
   left: 20px;
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 10px;
   z-index: 10;
 }
 
@@ -68,6 +41,7 @@ body.index-page {
   min-height: 100vh;
   text-align: center;
   padding: 2rem;
+  font-family: Calibri, sans-serif;
 }
 
 .index-page h1 {
@@ -90,28 +64,22 @@ body.index-page {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-@media (max-width: 600px) {
-  .index-page h1 {
-    font-size: 2.2rem;
-  }
-
-  .index-page .subtitle {
-    font-size: 1rem;
-  }
-
-  .index-page .cover-img {
-    max-width: 100%;
-  }
+.index-page footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #cccccc;
+}
 
 body.chapter-page {
   background-color: #0e0e0e;
   color: #e0e0e0;
-  padding: 2rem;
+  font-family: Calibri, sans-serif;
+  font-size: 16px;
   line-height: 1.6;
+  padding: 2rem;
   max-width: 800px;
   margin: auto;
   white-space: pre-line;
-  text-align: left;
 }
 
 .chapter-page h1 {
@@ -126,3 +94,6 @@ body.chapter-page {
   font-size: 1.1rem;
   color: #e0e0e0;
 }
+
+.spoken {
+  color: #81d
