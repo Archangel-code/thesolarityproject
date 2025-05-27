@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solarity – Work in Progress</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="index-page">
+<body class="index">
 
   <div class="chapter-nav">
     <a href="solarity_chapter1.html" class="nav-button">« Chapter 1</a>
@@ -18,12 +18,21 @@
     <p class="subtitle">Work in Progress</p>
   </header>
 
+  <!-- Sichtbares Bild -->
+  <main>
+    <img src="solarity_cover.png" alt="Solarity Cover" class="cover" onclick="startChapter1()" />
+  </main>
+
   <footer>
     <p>&copy; 2025 thesolarityproject.art</p>
   </footer>
 
-  <p class="disclaimer">
-    Solarity is a non-commercial fan project. It may include characters, universes, or elements from various copyrighted works.
-  </p>
+  <script>
+    // Beispiel: Klick auf das Bild startet Kapitel 1
+    function startChapter1() {
+      window.location.href = "solarity_chapter1.html";
+    }
+  </script>
+
 </body>
 </html>
