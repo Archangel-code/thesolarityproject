@@ -1,9 +1,11 @@
+/* ========== RESET ========== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ========== NAVIGATION OBEN LINKS ========== */
 .chapter-nav {
   position: absolute;
   top: 20px;
@@ -31,6 +33,7 @@
   color: #0e0e0e;
 }
 
+/* ========== INDEX.HTML ========== */
 body.index-page {
   background-color: #0e0e0e;
   color: #e0e0e0;
@@ -70,6 +73,7 @@ body.index-page {
   color: #cccccc;
 }
 
+/* ========== KAPITEL-SEITEN ========== */
 body.chapter-page {
   background-color: #0e0e0e;
   color: #e0e0e0;
@@ -88,6 +92,7 @@ body.chapter-page {
   margin-bottom: 2rem;
 }
 
+/* Zentrierter Coming-Soon-Inhalt für Kapitel 2 */
 .coming-soon {
   text-align: center;
   margin-top: 2rem;
@@ -95,5 +100,59 @@ body.chapter-page {
   color: #e0e0e0;
 }
 
+/* ========== TEXTFORMATIERUNG ========== */
 .spoken {
-  color: #81d
+  color: #81d4fa;
+  font-style: italic;
+  display: inline;
+}
+
+.translation {
+  color: #81d4fa;
+  font-style: italic;
+  display: block;
+  margin-top: -0.4rem;
+  margin-bottom: 1.4rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.timejump {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* ========== CHARAKTER-FARBEN ========== */
+.cortana {
+  color: #81d4fa;
+}
+
+.ahsoka {
+  color: #f4a261;
+}
+
+.philipp {
+  color: #1565c0;
+}
+
+/* ========== MOBILE ANPASSUNG ========== */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .nav-button {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .index-page .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .index-page .cover-img {
+    max-width: 100%;
+  }
+}
