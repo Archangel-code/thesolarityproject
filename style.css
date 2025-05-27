@@ -87,6 +87,7 @@ body.chapter-page {
 }
 
 .chapter-page h1 {
+  font-size: 3rem;
   color: #81d4fa;
   text-align: center;
   margin-bottom: 2rem;
