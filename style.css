@@ -1,45 +1,39 @@
+/* Grundstruktur */
 body {
-  background-color: #0e0e0e;
-  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  background: url("solarity_cover.png") no-repeat center center fixed;
+  background-size: cover;
   font-family: Calibri, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-  white-space: pre-line;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
+/* Optionaler Text-Schatten für bessere Lesbarkeit */
+body * {
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Haupttitel */
 h1 {
+  font-size: 3rem;
   color: #81d4fa;
-  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Untertitel */
+.subtitle {
+  font-size: 1.3rem;
+  color: #ffffff;
   margin-bottom: 2rem;
 }
 
-.spoken {
-  color: #81d4fa;
-  font-style: italic;
-  display: inline;
-}
-
-.translation {
-  color: #81d4fa;
-  font-style: italic;
-  display: block;
-  margin-top: -0.4rem;
-  margin-bottom: 1.4rem;
-  text-align: left;
-  font-size: 1rem;
-}
-
-.timejump {
-  color: #888;
-  font-style: italic;
-  text-align: center;
-  margin: 2rem 0;
-}
-
-/* --- NEU: Navigationsbuttons oben links --- */
+/* Navigationsbereich oben links */
 .chapter-nav {
   position: absolute;
   top: 20px;
@@ -49,20 +43,37 @@ h1 {
   z-index: 10;
 }
 
+/* Navigationsbuttons */
 .nav-button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #1e1e1e;
+  padding: 0.6rem 1.2rem;
+  background-color: rgba(17, 17, 17, 0.6);
   color: #81d4fa;
   border: 1px solid #81d4fa;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   font-size: 0.9rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-button:hover {
   background-color: #81d4fa;
   color: #0e0e0e;
+}
+
+/* Footer */
+footer {
+  font-size: 0.8rem;
+  color: #cccccc;
+  text-shadow: none;
+  margin-top: 2rem;
+}
+
+/* Disclaimer */
+.disclaimer {
+  font-size: 0.8rem;
+  color: #cccccc;
+  text-align: center;
+  margin-top: 1rem;
+  max-width: 800px;
 }
