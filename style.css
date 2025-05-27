@@ -151,4 +151,21 @@ footer p {
   .index-page .subtitle {
     font-size: 1rem;
   }
+  
+  /* --- Navigation Bottom Buttons --- */
+.chapter-nav-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 4rem auto 0 auto;
+  padding: 0 2rem;
+}
+
+/* --- Kapiteltext auf zentrierte Breite begrenzen --- */
+.chapter-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: left;
 }
