@@ -192,3 +192,25 @@ footer p {
   padding: 0 1rem;
   text-align: left;
 }
+
+/* === Zentriertes gesprochener Text mit Übersetzung === */
+.dialog-group {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.dialog-group .spoken {
+  color: #81d4fa;
+  font-style: italic;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.dialog-group .translation {
+  color: #81d4fa;
+  font-style: italic;
+  display: inline-block;
+  font-size: 1rem;
+}
