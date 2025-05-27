@@ -48,3 +48,27 @@ h1 {
   text-align: center;
   margin: 2rem 0;
 }
+
+.chapter-nav {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.nav-button {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #1e1e1e;
+  color: #81d4fa;
+  border: 1px solid #81d4fa;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #81d4fa;
+  color: #0e0e0e;
+}
+
