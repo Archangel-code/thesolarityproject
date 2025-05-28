@@ -213,3 +213,14 @@ footer p {
   display: inline-block;
   font-size: 1rem;
 }
+
+/* === Farbige Hervorhebungen === */
+.highlight-red {
+  color: #ff3333;
+  font-weight: bold;
+}
+
+.highlight-green {
+  color: #00cc66;
+  font-weight: bold;
+}
