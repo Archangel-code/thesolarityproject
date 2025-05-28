@@ -194,24 +194,19 @@ footer p {
 }
 
 /* === Gesprochener Text & Übersetzung im Kapitel-Stil === */
-.dialog-group {
-  text-align: left;
-  margin: 1.5rem auto;
-  max-width: 800px;
-}
-
-.dialog-group .spoken {
+/* === Gesprochener Text & Übersetzung im Kapitel-Stil === */
+.spoken {
   color: #81d4fa;
   font-style: italic;
-  display: block;
+  display: block;          /* Bricht in neue Zeile */
   font-size: 1rem;
   margin-bottom: 0.2rem;
 }
 
-.dialog-group .translation {
+.translation {
   color: #81d4fa;
   font-style: italic;
-  display: block;
+  display: block;          /* Bricht ebenfalls */
   font-size: 1rem;
+  margin: 0;
 }
-
