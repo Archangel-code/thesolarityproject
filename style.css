@@ -195,15 +195,14 @@ footer p {
 
 /* === Gesprochener Text & Übersetzung im Kapitel-Stil === */
 .dialog-group {
+  margin: 1rem 0;
   text-align: left;
-  margin: 1.5rem auto;
-  max-width: 800px;
 }
 
 .dialog-group .spoken {
   color: #81d4fa;
   font-style: italic;
-  display: block;
+  display: inline-block;
   font-size: 1rem;
   margin-bottom: 0.2rem;
 }
@@ -211,7 +210,6 @@ footer p {
 .dialog-group .translation {
   color: #81d4fa;
   font-style: italic;
-  display: block;
+  display: inline-block;
   font-size: 1rem;
 }
-
