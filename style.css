@@ -195,7 +195,6 @@ footer p {
 
 /* === Zentriertes gesprochener Text mit Übersetzung === */
 .dialog-group {
-  text-align: center;
   margin: 2rem auto;
   max-width: 800px;
 }
