@@ -134,20 +134,16 @@ footer {
 .spoken {
   color: #81d4fa;
   font-style: italic;
-  display: block;
   font-size: 1rem;
-  margin-top: 0.2rem;
-  margin-bottom: 0rem;
 }
 
 .translation {
   color: #81d4fa;
   font-style: italic;
-  display: block;
   font-size: 1rem;
-  margin-top: -0.4rem;
+  margin-top: 0.2rem;
   margin-bottom: 1.4rem;
-  text-align: left;
+  margin-left: 2rem; /* Optional: Einrückung der Übersetzung */
 }
 
 .timejump {
