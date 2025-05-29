@@ -157,38 +157,6 @@ footer {
   margin: 2rem 0;
 }
 
-.dialog-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.dialog-row .commentary {
-  flex: 1;
-  margin-right: 1rem;
-}
-
-.dialog-row .spoken-block {
-  flex-shrink: 0;
-  text-align: left;
-}
-
-.dialog-row .spoken-block .spoken {
-  color: #81d4fa;
-  font-style: italic;
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 0.2rem;
-}
-
-.dialog-row .spoken-block .translation {
-  color: #81d4fa;
-  font-style: italic;
-  display: block;
-  font-size: 1rem;
-}
-
 /* === Footer (zentriert für alle Seiten) === */
 footer p {
   margin: 0;
