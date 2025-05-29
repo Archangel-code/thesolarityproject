@@ -165,23 +165,26 @@ footer {
 
 /* === Sprachklassen (Gesprochene Aussage) === */
 .dialog-pair {
-  display: block;
-  margin: 0.8rem 0 1.4rem 0;
+  display: inline-block;
+  position: relative;
 }
 
 .dialog-pair .spoken {
+  display: inline;
   color: #81d4fa;
   font-style: italic;
   font-size: 1rem;
-  display: block;
 }
 
 .dialog-pair .translation {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 0.1rem;
   color: #81d4fa;
   font-style: italic;
   font-size: 1rem;
-  display: block;
-  margin-left: 2rem;
 }
 
 /* === Footer (zentriert für alle Seiten) === */
