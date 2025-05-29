@@ -52,6 +52,8 @@ h1, h2 {
 .cortana .spoken { color: #87cefa; }
 .ahsoka .spoken { color: orange; }
 .philipp .spoken { color: #1e90ff; }
+.friendly .spoken { color: #00B050; }
+.enemy .spoken { color: #FF0000; }
 
 /* Zeitsprung, Szenenwechsel etc. */
 .transition {
