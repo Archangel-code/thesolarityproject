@@ -41,7 +41,7 @@ h1, h2 {
   font-style: italic;
 }
 
-/* Kommentar-Absätze */
+/* Kommentar-Absätze */    /* <p><span class="comment">Sample Text.</span> */
 .comment {
   display: inline-block;
   margin-right: 10px;
@@ -49,12 +49,12 @@ h1, h2 {
   font-size: 1em;
 }
 
-/* Charakterfarben – erweiterbar */
+/* Charakterfarben – erweiterbar */    /* <p><span class="spoken character">„Sample Text.“</span></p> / <p class="translation character">//Sample Text.//</p> */
 .spoken.cortana, .translation.cortana { color: #7dd3fc; }     /* Hellblau */
 .spoken.ahsoka, .translation.ahsoka   { color: #fb923c; }     /* Orange */
 .spoken.philipp, .translation.philipp { color: #60a5fa; }     /* Dunkelblau */
-.spoken.friendly .translation.friendly { color: #00B050; }     /* Grün */
-.spoken.enemy .translation.enemy { color: #FF0000; }     /* Rot */
+.spoken.friendly, .translation.friendly { color: #00B050; }     /* Grün */
+.spoken.enemy, .translation.enemy { color: #FF0000; }     /* Rot */
 
 /* Zeitsprung, Szenenwechsel etc. */
 .transition {
