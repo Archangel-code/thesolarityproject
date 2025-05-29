@@ -131,20 +131,29 @@ footer {
 }
 
 /* === Sprachklassen (für Kapiteltexte) === */
-.spoken {
+.dialog-line {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.dialog-line .narration {
+  display: inline;
+  margin-right: 0.4rem;
+}
+
+.dialog-line .spoken {
   color: #81d4fa;
   font-style: italic;
   font-size: 1rem;
 }
 
-.translation {
-  display: block;
-  font-size: 1rem !important;
-  font-style: italic;
+.dialog-line .translation {
   color: #81d4fa;
-  margin-top: 0.1rem;
-  margin-bottom: 1rem;
-  margin-left: 0rem;
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  margin-left: 2rem; /* sorgt für leichte Einrückung */
 }
 
 .timejump {
@@ -152,26 +161,6 @@ footer {
   font-style: italic;
   text-align: center;
   margin: 2rem 0;
-}
-
-/* === Gesprochener Text & Übersetzung im Kapitel-Stil === */
-.dialog-group {
-  display: inline-block;
-}
-
-.dialog-group .spoken {
-  display: block;
-  color: #81d4fa;
-  font-style: italic;
-  margin-top: 0.2rem;
-}
-
-.dialog-group .translation {
-  display: block;
-  color: #81d4fa;
-  font-style: italic;
-  margin-top: 0.1rem;
-  margin-left: 0rem; /* Kein Versatz */
 }
 
 /* === Footer (zentriert für alle Seiten) === */
