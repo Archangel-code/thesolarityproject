@@ -130,7 +130,7 @@ footer {
   color: #0e0e0e;
 }
 
-/* === Sprachklassen (für Kapiteltexte) === */
+/* === Sprachklassen (Gesprochene Zeile) === */
 .dialog-line {
   display: flex;
   flex-direction: column;
@@ -156,6 +156,7 @@ footer {
   margin-left: 2rem; /* sorgt für leichte Einrückung */
 }
 
+/* === Sprachklassen (Gesprochene Aussage) === */
 .dialog-pair {
   display: block;
   margin: 0.8rem 0 1.4rem 0;
