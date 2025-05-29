@@ -155,24 +155,22 @@ footer {
 
 /* === Gesprochener Text & Übersetzung im Kapitel-Stil === */
 .dialog-group {
-  margin: 1rem 0;
-  text-align: left;
+  display: inline-block;
 }
 
 .dialog-group .spoken {
+  display: block;
   color: #81d4fa;
   font-style: italic;
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
 }
 
 .dialog-group .translation {
+  display: block;
   color: #81d4fa;
   font-style: italic;
-  display: block;
-  font-size: 0.1rem;
-  margin-top: 0rem;
+  margin-top: 0.1rem;
+  margin-left: 0rem; /* Kein Versatz */
 }
 
 /* === Footer (zentriert für alle Seiten) === */
