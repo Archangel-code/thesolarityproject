@@ -1,3 +1,37 @@
+/* === Index Styles === */
+.index-page {
+  background-color: #111;
+  color: #e0e0e0;
+  font-family: Calibri, sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+.cover-container {
+  margin-top: 2rem;
+}
+
+.cover-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #ccc;
+}
+
+.disclaimer {
+  font-size: 0.9rem;
+  color: #999;
+  max-width: 600px;
+  margin: 2rem auto 0 auto;
+  line-height: 1.5;
+  text-align: center;
+}
+
 /* Allgemeine Basisstruktur */
 body {
   margin: 0;
