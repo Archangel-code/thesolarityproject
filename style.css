@@ -156,6 +156,26 @@ footer {
   margin-left: 2rem; /* sorgt für leichte Einrückung */
 }
 
+.dialog-pair {
+  display: block;
+  margin: 0.8rem 0 1.4rem 0;
+}
+
+.dialog-pair .spoken {
+  color: #81d4fa;
+  font-style: italic;
+  font-size: 1rem;
+  display: block;
+}
+
+.dialog-pair .translation {
+  color: #81d4fa;
+  font-style: italic;
+  font-size: 1rem;
+  display: block;
+  margin-left: 2rem;
+}
+
 .timejump {
   color: #888;
   font-style: italic;
