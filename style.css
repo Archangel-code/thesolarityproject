@@ -131,60 +131,48 @@ footer {
 }
 
 /* === Sprachklassen (Gesprochene Zeile) === */
-.dialog-line {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.5rem;
-}
-
-.dialog-line .narration {
-  display: inline;
-  margin-right: 0.4rem;
-}
-
-.dialog-line .spoken {
+/* Variante 1: Inline-Kommentar + Übersetzung leicht eingerückt */
+.dialog-inline .spoken {
   color: #81d4fa;
   font-style: italic;
-  font-size: 1rem;
 }
 
-.dialog-line .translation {
+.dialog-inline .translation {
   color: #81d4fa;
   font-style: italic;
-  font-size: 1rem;
-  margin-top: 0.2rem;
-  margin-left: 2rem; /* sorgt für leichte Einrückung */
-}
-
-.timejump {
-  color: #888;
-  font-style: italic;
-  text-align: center;
-  margin: 2rem 0;
-}
-
-/* === Sprachklassen (Gesprochene Aussage) === */
-.dialog-pair {
-  display: inline-block;
-  position: relative;
-}
-
-.dialog-pair .spoken {
-  display: inline;
-  color: #81d4fa;
-  font-style: italic;
-  font-size: 1rem;
-}
-
-.dialog-pair .translation {
   display: block;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  margin-top: 0.1rem;
+  margin-left: 3rem; /* etwas eingerückt */
+  margin-top: 0.2rem;
+  font-size: 1rem;
+}
+
+/* Variante 2: Alles zentriert */
+.dialog-centered {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.dialog-centered .spoken,
+.dialog-centered .translation {
+  display: block;
+  font-style: italic;
+  color: #81d4fa;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Variante 3: Gesagtes links, Übersetzung eingerückt */
+.dialog-indented .spoken {
   color: #81d4fa;
   font-style: italic;
-  font-size: 1rem;
+  display: block;
+}
+
+.dialog-indented .translation {
+  color: #81d4fa;
+  font-style: italic;
+  display: block;
+  margin-left: 2rem;
 }
 
 /* === Footer (zentriert für alle Seiten) === */
