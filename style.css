@@ -138,12 +138,13 @@ footer {
 }
 
 .translation {
-  color: #81d4fa;
+  display: block;
+  font-size: 1rem !important;
   font-style: italic;
-  font-size: 1rem;
-  margin-top: 0.2rem;
-  margin-bottom: 1.4rem;
-  margin-left: 2rem; /* Optional: Einrückung der Übersetzung */
+  color: #81d4fa;
+  margin-top: 0.1rem;
+  margin-bottom: 1rem;
+  margin-left: 0rem;
 }
 
 .timejump {
