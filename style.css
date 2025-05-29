@@ -24,10 +24,11 @@ h1, h2 {
 }
 
 /* Gesprochener Text */
-.spoken {
-  color: #87cefa; /* Hellblau als Standard */
-  display: inline;
-  font-size: 1.1em;
+.spoken, .translation {
+  display: block;
+  font-weight: bold;
+  margin-top: 4px;
+  margin-bottom: 12px;
 }
 
 /* Übersetzung */
@@ -49,11 +50,11 @@ h1, h2 {
 }
 
 /* Charakterfarben – erweiterbar */
-.cortana .spoken { color: #87cefa; }
-.ahsoka .spoken { color: orange; }
-.philipp .spoken { color: #1e90ff; }
-.friendly .spoken { color: #00B050; }
-.enemy .spoken { color: #FF0000; }
+.spoken.cortana, .translation.cortana { color: #7dd3fc; }     /* Hellblau */
+.spoken.ahsoka, .translation.ahsoka   { color: #fb923c; }     /* Orange */
+.spoken.philipp, .translation.philipp { color: #60a5fa; }     /* Dunkelblau */
+.spoken.friendly .translation.friendly { color: #00B050; }     /* Grün */
+.spoken.enemy .translation.enemy { color: #FF0000; }     /* Rot */
 
 /* Zeitsprung, Szenenwechsel etc. */
 .transition {
