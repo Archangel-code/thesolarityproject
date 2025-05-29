@@ -156,6 +156,13 @@ footer {
   margin-left: 2rem; /* sorgt für leichte Einrückung */
 }
 
+.timejump {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  margin: 2rem 0;
+}
+
 /* === Sprachklassen (Gesprochene Aussage) === */
 .dialog-pair {
   display: block;
@@ -175,13 +182,6 @@ footer {
   font-size: 1rem;
   display: block;
   margin-left: 2rem;
-}
-
-.timejump {
-  color: #888;
-  font-style: italic;
-  text-align: center;
-  margin: 2rem 0;
 }
 
 /* === Footer (zentriert für alle Seiten) === */
