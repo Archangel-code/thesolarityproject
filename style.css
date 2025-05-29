@@ -146,20 +146,14 @@ footer .disclaimer {
 }
 
 /* Navigation Buttons */
-#index-buttons {
+.nav-buttons {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 16px;
+  left: 16px;
   display: flex;
   flex-direction: column;
-}
-
-.chapter-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-  max-width: 600px;
-  width: 100%;
+  gap: 8px;
+  z-index: 10;
 }
 
 .nav-buttons a {
@@ -175,6 +169,22 @@ footer .disclaimer {
 .nav-buttons a:hover {
   background-color: #81d4fa;
   color: #000;
+}
+
+#index-buttons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chapter-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  max-width: 600px;
+  width: 100%;
 }
 
 /* Mobile Anpassungen */
