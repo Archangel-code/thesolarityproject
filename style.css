@@ -49,6 +49,12 @@ h1, h2 {
   font-size: 1em;
 }
 
+/* Narration-Absätze */    /* <span class="narration">, Sample Text.</span> */
+.narration {
+  color: inherit;     /* Standardfarbe übernehmen */
+  font-style: normal; /* Kein Italic wie spoken */
+}
+
 /* Charakterfarben – erweiterbar */    /* <p><span class="spoken character">„Sample Text.“</span></p> / <p class="translation character">//Sample Text.//</p> */
 .spoken.cortana, .translation.cortana { color: #7dd3fc; }     /* Hellblau */
 .spoken.ahsoka, .translation.ahsoka   { color: #fb923c; }     /* Orange */
