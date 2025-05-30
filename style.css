@@ -124,41 +124,17 @@ footer .disclaimer {
   text-align: center;
 }
 
-/* Navigation Buttons */
-.nav-buttons {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  z-index: 10;
-}
-
-.nav-buttons a {
-  color: white;
-  text-decoration: none;
-  background-color: rgba(68, 68, 68, 0.7);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.nav-buttons a:hover {
-  background-color: #81d4fa;
-  color: #000;
-}
-
+/* Navigation oben links NUR auf index.html */
 #index-buttons {
   position: absolute;
   top: 20px;
   left: 20px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
-/* === Kapitel-Navigation unten === */
+/* Navigation unten zentriert NUR für Kapitel-Seiten */
 .chapter-nav-bottom {
   display: flex;
   justify-content: space-between;
