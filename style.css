@@ -179,12 +179,30 @@ footer .disclaimer {
   flex-direction: column;
 }
 
-.chapter-buttons {
+/* === Kapitel-Navigation unten === */
+.chapter-nav-bottom {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
-  max-width: 600px;
-  width: 100%;
+  align-items: center;
+  max-width: 800px;
+  margin: 4rem auto 0 auto;
+  padding: 0 2rem;
+}
+
+.chapter-nav-bottom a {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(17, 17, 17, 0.6);
+  padding: 10px 16px;
+  border-radius: 5px;
+  border: 1px solid #81d4fa;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.chapter-nav-bottom a:hover {
+  background-color: #81d4fa;
+  color: #0e0e0e;
 }
 
 /* Mobile Anpassungen */
