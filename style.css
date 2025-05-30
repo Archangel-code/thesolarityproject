@@ -73,9 +73,9 @@ h1, h2 {
 /* Hinweis für "Coming Soon"-Seite */
 .coming-soon {
   text-align: center;
-  margin-top: 20vh;
-  font-size: 1.5em;
-  font-weight: bold;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
 /* === Index-Seite Styles === */
