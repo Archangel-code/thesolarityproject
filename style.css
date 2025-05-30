@@ -134,6 +134,23 @@ footer .disclaimer {
   gap: 10px;
 }
 
+#index-buttons a {
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  padding: 10px 16px;
+  border-radius: 5px;
+  border: 1px solid #81d4fa;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 8px;
+}
+
+#index-buttons a:hover {
+  background-color: #81d4fa;
+  color: #000e0e;
+}
+
 /* Navigation unten zentriert NUR für Kapitel-Seiten */
 .chapter-nav-bottom {
   display: flex;
