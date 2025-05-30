@@ -70,27 +70,6 @@ h1, h2 {
   font-style: italic;
 }
 
-/* Buttons für Navigation */
-.nav-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 60px;
-  text-align: center;
-}
-
-.nav-buttons a {
-  text-decoration: none;
-  color: white;
-  background-color: #444;
-  padding: 12px 24px;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-
-.nav-buttons a:hover {
-  background-color: #666;
-}
-
 /* Hinweis für "Coming Soon"-Seite */
 .coming-soon {
   text-align: center;
