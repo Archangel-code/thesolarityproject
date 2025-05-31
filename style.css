@@ -165,12 +165,3 @@ footer .disclaimer {
     background-size: cover;
   }
 }
-
-/* Text besser lesbar auf Bildhintergrund */
-.index-page h1,
-.index-page .subtitle,
-.index-page #index-buttons,
-.index-page .disclaimer {
-  color: #e0e0e0;
-  text-shadow: 0 0 5px #000;
-}
