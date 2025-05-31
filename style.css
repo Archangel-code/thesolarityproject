@@ -153,49 +153,16 @@ footer .disclaimer {
   color: #000e0e;
 }
 
-/* Navigation unten zentriert NUR für Kapitel-Seiten */
-.chapter-nav-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 800px;
-  margin: 4rem auto 0 auto;
-  padding: 0 2rem;
+/* Standard-Hintergrundbild für Desktop */
+body.index {
+  background: url("images/background_desktop.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
-.chapter-nav-bottom a {
-  text-decoration: none;
-  color: white;
-  background-color: rgba(17, 17, 17, 0.6);
-  padding: 10px 16px;
-  border-radius: 5px;
-  border: 1px solid #81d4fa;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.chapter-nav-bottom a:hover {
-  background-color: #81d4fa;
-  color: #0e0e0e;
-}
-
-/* Mobile Anpassungen */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
-  .nav-buttons {
-    top: 8px;
-    left: 8px;
-  }
-
-  .nav-buttons a {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
+/* Hintergrundbild für Mobilgeräte */
+@media screen and (max-width: 768px) {
+  body.index {
+    background: url("images/background_mobile.jpg") no-repeat center center fixed;
+    background-size: cover;
   }
 }
