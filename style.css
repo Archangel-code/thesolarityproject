@@ -155,14 +155,14 @@ footer .disclaimer {
 
 /* Standard-Hintergrundbild für Desktop */
 body.index {
-  background: url("images/background_desktop.jpg") no-repeat center center fixed;
+  background: url("images/background_desktop.png") no-repeat center center fixed;
   background-size: cover;
 }
 
 /* Hintergrundbild für Mobilgeräte */
 @media screen and (max-width: 768px) {
   body.index {
-    background: url("images/background_mobile.jpg") no-repeat center center fixed;
+    background: url("images/background_mobile.png") no-repeat center center fixed;
     background-size: cover;
   }
 }
