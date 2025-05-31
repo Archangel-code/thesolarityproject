@@ -126,20 +126,6 @@ footer .disclaimer {
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .index-page .disclaimer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Hintergrund für bessere Lesbarkeit */
-    font-size: 0.8rem;
-    line-height: 1.4;
-    padding: 1rem;
-    text-align: center;
-    z-index: 100;
-  }
-
 /* Mobile Anpassungen */
 @media (max-width: 768px) {
   .index-page h1 {
