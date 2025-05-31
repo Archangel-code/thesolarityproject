@@ -155,13 +155,16 @@ footer .disclaimer {
 
 /* === Index-Startbild je nach Bildschirmgröße === */
 .index-page {
-  background: url("background_desktop.png") no-repeat center center fixed;
-  background-size: cover;
+  background: url("background_desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 @media screen and (max-width: 768px) {
   .index-page {
-    background: url("background_mobile.png") no-repeat center center fixed;
+    background: url("background_mobile.png");
     background-size: cover;
   }
 }
