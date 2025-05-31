@@ -153,16 +153,24 @@ footer .disclaimer {
   color: #000e0e;
 }
 
-/* Standard-Hintergrundbild für Desktop */
-body.index {
+/* === Index-Startbild je nach Bildschirmgröße === */
+.index-page {
   background: url("images/background_desktop.png") no-repeat center center fixed;
   background-size: cover;
 }
 
-/* Hintergrundbild für Mobilgeräte */
 @media screen and (max-width: 768px) {
-  body.index {
+  .index-page {
     background: url("images/background_mobile.png") no-repeat center center fixed;
     background-size: cover;
   }
+}
+
+/* Text besser lesbar auf Bildhintergrund */
+.index-page h1,
+.index-page .subtitle,
+.index-page #index-buttons,
+.index-page .disclaimer {
+  color: #e0e0e0;
+  text-shadow: 0 0 5px #000;
 }
