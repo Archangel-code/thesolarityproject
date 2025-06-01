@@ -193,7 +193,7 @@ footer {
 
 /* === Index-Startbild je nach Bildschirmgröße === */
 .index-page {
-  background-image: url('/images/background_desktop.png'); /* oder relativer Pfad korrekt setzen */
+  background-image: url('/images/background_desktop.png'); /* Pfad anpassen */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -229,14 +229,14 @@ footer {
     font-size: 0.8rem;
     z-index: 99;
     overflow: hidden;
-}
+  }
 
   .index-page .disclaimer span {
     display: inline-block;
     white-space: nowrap;
     animation: scroll-left 28s linear infinite;
     padding-left: 100%;
-}
+  }
 
   .index-page footer {
   background-color: rgba(0, 0, 0, 0.6);
