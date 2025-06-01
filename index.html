@@ -92,10 +92,11 @@
       updateMuteUI();
     }
 
-    function updateMuteUI() {
-      muteBtn.textContent = audio.muted ? "🔈" : "🔇";
-      muteLabel.textContent = audio.muted ? "Muted" : "";
+   function updateMuteUI() {
+    muteBtn.textContent = audio.muted ? "🔇" : "🔈";
+    muteLabel.textContent = audio.muted ? "Muted" : "";
     }
+
 
     function setVolume(val) {
       audio.volume = val;
