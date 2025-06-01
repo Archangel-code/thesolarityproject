@@ -18,11 +18,29 @@ body {
 }
 
 /* Überschriftenzentrierung */
-h1, h2 {
+h1 {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 20px;
+  font-size: 2.5rem; /* mobil */
 }
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+
+/* Nur Desktop: Überschrift größer */
+@media screen and (min-width: 769px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
 
 /* Gesprochener Text */
 p.spoken, p.translation {
