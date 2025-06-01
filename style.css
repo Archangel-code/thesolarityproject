@@ -44,6 +44,12 @@ span.translation {
   font-style: italic;
 }
 
+p.spoken {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
 /* Übersetzungen direkt unter Inline-Dialog */
 p.translation {
   display: block;
