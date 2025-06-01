@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: Calibri, sans-serif;
+  background-color: #111;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.chapter-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 2px;
+  text-align: left;
+}
+
+/* Überschriften */
+h1, h2, h3 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+
+@media screen and (min-width: 769px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Dialogstruktur */
+p.spoken, p.translation {
+  display: block;
+  font-weight: bold;
+  margin-top: 0;
+  margin-left: 40px;
+}
+
+span.spoken {
+  display: inline;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+p.spoken {
+  margin-bottom: 2px;
+}
+
+span.translation {
+  display: inline;
+  font-style: italic;
+}
+
+p.translation {
+  margin-top: 2px;
+  margin-bottom: 16px;
+  margin-left: 0;
+  font-size: 0.95em;
+  font-style: italic;
+}
+
+span.comment {
+  display: inline;
+  font-weight: normal;
+  font-style: normal;
+  color: inherit;
+  font-size: inherit;
+  margin-right: 0;
+}
+
+.narration {
+  color: inherit;
+  font-style: normal;
+}
+
+/* Farbklassen für Charaktere */
+.spoken.cortana, .translation.cortana { color: #7dd4fc; }
+.spoken.ahsoka, .translation.ahsoka { color: #f79c2c; }
+.spoken.philipp, .translation.philipp { color: #5b85fa; }
+.spoken.friendly, .translation.friendly { color: #00bb96; }
+.spoken.enemy, .translation.enemy { color: #ff0000; }
+
+/* Kapitel-Navigation */
+.chapter-buttons {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.chapter-buttons a {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease, transform 0.2s ease;
+  min-width: 120px;
+  text-align: center;
+}
+
+.chapter-buttons a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Zusatzklassen */
+.manual-tight { margin-top: -4px !important; }
+.manual-loose { margin-bottom: 24px !important; }
+.manual-right { text-align: right !important; }
+.manual-left { text-align: left !important; }
+.manual-center { text-align: center !important; }
+.manual-indent { margin-left: 40px !important; }
+.manual-noindent { margin-left: 0 !important; }
+.manual-small { font-size: 0.85em !important; opacity: 0.85; }
+.manual-large { font-size: 1.15em !important; font-weight: bold; }
