@@ -161,6 +161,38 @@ h1, h2 {
     animation: none;
     padding-left: 0;
   }
+
+  /* === Einheitliches Button-Design für Index & Kapitel === */
+.index-buttons,
+.chapter-buttons {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 100;
+ }
+
+.index-buttons a,
+.chapter-buttons a {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease, transform 0.2s ease;
+ }
+
+.index-buttons a:hover,
+.chapter-buttons a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+ }
 }
 
 /* Animation */
