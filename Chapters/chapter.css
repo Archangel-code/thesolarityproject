@@ -40,6 +40,23 @@ h3 {
   }
 }
 
+/* Kapitel-Titel */
+.chapter-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+/* Coming-Soon Hinweis */
+.coming-soon {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #eeeeee;
+  margin-top: 20px;
+}
+
 /* Dialogstruktur */
 p.spoken, p.translation {
   display: block;
