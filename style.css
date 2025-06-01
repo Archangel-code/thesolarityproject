@@ -292,3 +292,60 @@ span.comment {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
+
+/* AUDIO UI */
+#audio-controls {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 9999;
+  gap: 0.5rem;
+}
+
+#mute-btn {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#mute-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#mute-label {
+  color: white;
+  font-size: 0.9rem;
+  margin-right: 4px;
+}
+
+#volume-slider {
+  width: 120px;
+}
+
+/* Hinweis-Meldung */
+#audio-hint {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+#audio-hint.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
