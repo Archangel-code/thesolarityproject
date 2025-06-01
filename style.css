@@ -36,18 +36,19 @@ p.spoken, p.translation {
 span.spoken {
   display: inline;
   font-weight: bold;
+  margin-left: 4px; /* optional für minimalen Abstand nach Kommentar */
+}
+
+p.spoken {
+  margin-top: 12px;       /* etwas kompakter als 20px */
+  margin-bottom: 4px;     /* minimaler Abstand vor der Übersetzung */
+  font-weight: bold;
 }
 
 /* Übersetzung inline oder block, je nach Struktur */
 span.translation {
   display: inline;
   font-style: italic;
-}
-
-p.spoken {
-  margin-top: 20px;
-  margin-bottom: 6px;
-  font-weight: bold;
 }
 
 /* Übersetzungen direkt unter Inline-Dialog */
