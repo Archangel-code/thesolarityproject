@@ -24,14 +24,6 @@ h1, h2 {
   margin-bottom: 20px;
 }
 
-/* Gesprochener Text */
-p.spoken, p.translation {
-  display: block;
-  font-weight: bold;
-  margin-top: 0;
-  margin-left: 40px;
-}
-
 /* Übersetzung unter einem Inline-Dialog */
 span.spoken + p.translation,
 p:has(span.spoken) + p.translation {
