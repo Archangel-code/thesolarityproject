@@ -167,36 +167,37 @@ footer {
 }
 
 /* Navigation oben links NUR auf index.html */
-#index-buttons {
+.index-buttons {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 1.2rem;
+  left: 1.2rem;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.5rem;
+  z-index: 100;
 }
 
-#index-buttons a {
-  text-decoration: none;
+.index-buttons a {
+  background-color: #1a1a1a;
   color: white;
-  background-color: transparent;
-  padding: 10px 16px;
-  border-radius: 5px;
-  border: 1px solid #81d4fa;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-bottom: 8px;
+  transition: background 0.3s ease;
 }
 
-#index-buttons a:hover {
-  background-color: #81d4fa;
-  color: #000e0e;
+.index-buttons a:hover {
+  background-color: #333;
 }
 
 /* === Index-Startbild je nach Bildschirmgröße === */
 .index-page {
-  background: url("background_desktop.png") no-repeat center center fixed;
+  background-image: url('/images/background_desktop.png'); /* oder relativer Pfad korrekt setzen */
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 @media screen and (max-width: 768px) {
@@ -216,16 +217,25 @@ footer {
 
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 769px) {
   .index-page .disclaimer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     padding: 1rem;
-    font-size: 0.7rem;
-    z-index: 20;
+    color: #e0e0e0;
+    font-size: 0.8rem;
+    z-index: 99;
+    overflow: hidden;
+}
+
+  .index-page .disclaimer span {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 28s linear infinite;
+    padding-left: 100%;
 }
 
   .index-page footer {
