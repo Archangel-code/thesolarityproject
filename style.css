@@ -1,5 +1,4 @@
-
-/* Allgemeine Basisstruktur */
+/* Basislayout für Index */
 body {
   margin: 0;
   padding: 0;
@@ -9,115 +8,7 @@ body {
   line-height: 1.6;
 }
 
-/* Hauptcontainer für Kapitelinhalte */
-.chapter-container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 2px;
-  text-align: left;
-}
-
-/* Überschriftenzentrierung */
-h1 {
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  font-size: 2.5rem; /* mobil */
-}
-
-h2 {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 1.25rem;
-}
-
-h3 {
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  font-size: 2.5rem; /* mobil */
-}
-
-/* Nur Desktop: Überschrift größer */
-@media screen and (min-width: 769px) {
-  h1 {
-    font-size: 3.5rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-/* Gesprochener Text */
-p.spoken, p.translation {
-  display: block;
-  font-weight: bold;
-  margin-top: 0;
-  margin-left: 40px;
-}
-
-/* Inline-Span-Varianten (z. B. nach Kommentar) */
-span.spoken {
-  display: inline;
-  font-weight: bold;
-  margin-left: 4px; /* optional für minimalen Abstand nach Kommentar */
-}
-
-p.spoken {
-  margin-bottom: 2px;
-  margin-left: 40px;
-}
-
-/* Übersetzung inline oder block, je nach Struktur */
-span.translation {
-  display: inline;
-  font-style: italic;
-}
-
-/* Übersetzungen direkt unter Inline-Dialog */
-p.translation {
-  margin-top: 2px;
-  margin-bottom: 16px;
-  margin-left: 0;     /* nicht eingerückt wie vorher */
-  font-size: 0.95em;
-  font-style: italic;
-}
-
-/* Kommentar-Absätze */
-span.comment {
-  display: inline;
-  font-weight: normal;
-  font-style: normal;
-  color: inherit;
-  font-size: inherit;
-  margin-right: 0;
-}
-
-/* Erzähltext */
-.narration {
-  color: inherit;
-  font-style: normal;
-}
-
-/* Charakterfarben */
-.spoken.cortana, .translation.cortana { color: #7dd4fc; }
-.spoken.ahsoka, .translation.ahsoka { color: #f79c2c; }
-.spoken.philipp, .translation.philipp { color: #5b85fa; }
-.spoken.friendly, .translation.friendly { color: #00bb96; }
-.spoken.enemy, .translation.enemy { color: #ff0000; }
-
-/* Hinweis auf "Coming Soon"-Seite */
-.coming-soon {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #81d4fa;
-  text-align: center;
-  margin-top: 4vh;
-  margin-bottom: 2vh;
-}
-
-/* Index-Seite Styles */
+/* Index-spezifisches Hintergrundbild */
 .index-page {
   background-image: url('Pictures/background_desktop.png');
   background-repeat: no-repeat;
@@ -133,63 +24,11 @@ span.comment {
   color: #e0e0e0;
 }
 
-  /* === Einheitliches Button-Design für Index === */
-.index-buttons {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  z-index: 100;
- }
-
-.index-buttons a {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
-  padding: 10px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(4px);
-  transition: background 0.3s ease, transform 0.2s ease;
- }
-
-.index-buttons a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
- }
-
-/* Kapitel-Seite: Navigationsbuttons unten nebeneinander, mittlerer Home-Button */
-.chapter-buttons {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.chapter-buttons a {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
-  padding: 10px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(4px);
-  transition: background 0.3s ease, transform 0.2s ease;
-  min-width: 120px;
-  text-align: center;
-}
-
-.chapter-buttons a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
+/* Mobile Hintergrund */
+@media screen and (max-width: 768px) {
+  .index-page {
+    background-image: url('Pictures/background_mobile.png');
+  }
 }
 
 /* Disclaimer Desktop */
@@ -215,16 +54,8 @@ span.comment {
   }
 }
 
-/* Mobile: Statischer Disclaimer */
+/* Mobile Disclaimer */
 @media screen and (max-width: 768px) {
-  .index-page {
-    background-image: url('Pictures/background_mobile.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-
   .index-page .disclaimer {
     position: static;
     background-color: rgba(0, 0, 0, 0.7);
@@ -240,60 +71,38 @@ span.comment {
     animation: none;
     padding-left: 0;
   }
+}
 
-  /* Animation */
-@keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
- }
+/* Index Buttons */
+.index-buttons {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 100;
+}
 
-/* === Manuelle Stilklassen zur gezielten Positionierung === */    /* === style="margin-EXAMPLE: 00px === */
-.manual-tight {
-  margin-top: -4px !important;
- }
-
-.manual-loose {
-  margin-bottom: 24px !important;
- }
-
-.manual-right {
-  text-align: right !important;
- }
-
-.manual-left {
-  text-align: left !important;
- }
-
-.manual-center {
-  text-align: center !important;
- }
-
-.manual-indent {
-  margin-left: 40px !important;
- }
-
-.manual-noindent {
-  margin-left: 0 !important;
- }
-
-.manual-small {
-  font-size: 0.85em !important;
-  opacity: 0.85;
- }
-
-.manual-large {
-  font-size: 1.15em !important;
+.index-buttons a {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
   font-weight: bold;
- }
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Animation */
-@keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+.index-buttons a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
 }
 
-/* AUDIO UI */
+/* Audio UI */
 #audio-controls {
   position: fixed;
   top: 1rem;
@@ -330,7 +139,6 @@ span.comment {
   width: 120px;
 }
 
-/* Hinweis-Meldung */
 #audio-hint {
   position: fixed;
   bottom: 2rem;
@@ -348,4 +156,10 @@ span.comment {
 #audio-hint.hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+/* Animation */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
