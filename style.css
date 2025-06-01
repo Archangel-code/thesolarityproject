@@ -241,6 +241,25 @@ span.comment {
     padding-left: 0;
   }
 
+  /* Disclaimer Audio */
+  #audio-hint {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+#audio-hint.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
   /* Animation */
 @keyframes scroll-left {
   0% { transform: translateX(0); }
