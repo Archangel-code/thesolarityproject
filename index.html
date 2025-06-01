@@ -32,7 +32,7 @@
   </footer>
 
 <!-- AUDIO PLAYER + UI -->
-<audio id="bg-audio" autoplay loop>
+<audio id="bg-audio" loop>
   <source src="Audio/beach_ambience.mp3" type="audio/mpeg" />
 </audio>
 
@@ -123,18 +123,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }, { once: true });
   });
 });
-
-<script>
-  // ... deine anderen Funktionen toggleMute(), updateUI(), setVolume()
-
-  window.addEventListener("DOMContentLoaded", () => {
-    updateUI();
-    audio.play().catch(() => {
-      document.body.addEventListener("click", () => {
-        audio.play();
-      }, { once: true });
-    });
-  });
 </script>
 </body>
 </html>
