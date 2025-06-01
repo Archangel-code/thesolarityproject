@@ -112,9 +112,12 @@
   }
 
   // Initial UI sync on page load
+let hint;
+
 window.addEventListener("DOMContentLoaded", () => {
   updateUI();
-  const hint = document.getElementById("audio-hint");
+  hint = document.getElementById("audio-hint");
+});
 
   function hideHint() {
     if (hint && !hint.classList.contains("hidden")) {
