@@ -126,51 +126,6 @@ footer .disclaimer {
   text-align: center;
 }
 
-/* Mobile Anpassungen */
-@media (max-width: 768px) {
-  .index-page h1 {
-    font-size: 2rem;
-  }
-
-  .index-page .subtitle {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .index-page .disclaimer {
-    font-size: 0.8rem;
-    line-height: 1.4;
-    padding: 1rem;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Hintergrund für bessere Lesbarkeit */
-  }
-
-  .cover-container {
-    margin: 0 auto;
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  .cover-image {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .nav-buttons {
-    top: 1rem;
-    left: 1rem;
-  }
-
-  .nav-buttons a {
-    font-size: 0.9rem;
-    padding: 0.3rem 0.8rem;
-  }
-
 /* Navigation oben links NUR auf index.html */
 #index-buttons {
   position: absolute;
@@ -218,5 +173,27 @@ footer .disclaimer {
 .index-page .disclaimer {
   color: #e0e0e0;
   text-shadow: 0 0 5px #000;
+
 }
+  
+  .index-page .disclaimer {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 2rem;
+  max-width: 600px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .index-page .disclaimer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    font-size: 0.7rem;
+    z-index: 20;
   }
+}
