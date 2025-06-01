@@ -56,11 +56,11 @@ h1, h2 {
 }
 
 /* Charakterfarben */
-.spoken_cortana, .translation_cortana { color: #7dd4fc; }
-.spoken_ahsoka, .translation_ahsoka { color: #f79c2c; }
-.spoken_philipp, .translation_philipp { color: #5b85fa; }
-.spoken_friendly, .translation_friendly { color: #00bb96; }
-.spoken_enemy, .translation_enemy { color: #ff0000; }
+.spoken_cortana, .translation.cortana { color: #7dd4fc; }
+.spoken_ahsoka, .translation.ahsoka { color: #f79c2c; }
+.spoken_philipp, .translation.philipp { color: #5b85fa; }
+.spoken_friendly, .translation.friendly { color: #00bb96; }
+.spoken_enemy, .translation.enemy { color: #ff0000; }
 
 /* Hinweis auf "Coming Soon"-Seite */
 .coming-soon {
@@ -74,7 +74,7 @@ h1, h2 {
 
 /* Index-Seite Styles */
 .index-page {
-  background-image: url('/images/background_desktop.png');
+  background-image: url('background_desktop.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -139,7 +139,7 @@ h1, h2 {
 /* Mobile: Statischer Disclaimer */
 @media screen and (max-width: 768px) {
   .index-page {
-    background-image: url('/images/background_mobile.png');
+    background-image: url('background_mobile.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
