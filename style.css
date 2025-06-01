@@ -1,3 +1,4 @@
+
 /* Allgemeine Basisstruktur */
 body {
   margin: 0;
@@ -12,11 +13,11 @@ body {
 .chapter-container {
   max-width: 900px;
   margin: 40px auto;
-  padding: 20px;
+  padding: 2px;
   text-align: left;
 }
 
-/* Überschriftzentrierung */
+/* Überschriftenzentrierung */
 h1, h2 {
   text-align: center;
   margin-top: 40px;
@@ -27,21 +28,20 @@ h1, h2 {
 .spoken, .translation {
   display: block;
   font-weight: bold;
-  margin-top: 4px;
+  margin-top: 40px;
   margin-bottom: 12px;
 }
 
 /* Übersetzung */
 .translation {
   color: #90ee90; /* Hellgrün */
-  display: block;
   margin-top: -10px;
   margin-left: 40px;
   font-size: 0.95em;
   font-style: italic;
 }
 
-/* Kommentar-Absätze */    /* <p><span class="comment">Sample Text.</span> */
+/* Kommentar-Absätze */
 .comment {
   display: inline-block;
   margin-right: 10px;
@@ -49,124 +49,46 @@ h1, h2 {
   font-size: 1em;
 }
 
-/* Narration-Absätze */    /* <span class="narration">, Sample Text.</span> */
+/* Erzähltext */
 .narration {
-  color: inherit;     /* Standardfarbe übernehmen */
-  font-style: normal; /* Kein Italic wie spoken */
+  color: inherit;
+  font-style: normal;
 }
 
-/* Charakterfarben – erweiterbar */    /* <p><span class="spoken character">„Sample Text.“</span></p> / <p class="translation character">//Sample Text.//</p> */
-.spoken.cortana, .translation.cortana { color: #7dd3fc; }     /* Hellblau */
-.spoken.ahsoka, .translation.ahsoka   { color: #fb923c; }     /* Orange */
-.spoken.philipp, .translation.philipp { color: #60a5fa; }     /* Dunkelblau */
-.spoken.friendly, .translation.friendly { color: #00B050; }     /* Grün */
-.spoken.enemy, .translation.enemy { color: #FF0000; }     /* Rot */
+/* Charakterfarben */
+.spoken_cortana, .translation_cortana { color: #7dd4fc; }
+.spoken_ahsoka, .translation_ahsoka { color: #f79c2c; }
+.spoken_philipp, .translation_philipp { color: #5b85fa; }
+.spoken_friendly, .translation_friendly { color: #00bb96; }
+.spoken_enemy, .translation_enemy { color: #ff0000; }
 
-/* Zeitsprung, Szenenwechsel etc. */
-.transition {
-  color: gray;
-  text-align: center;
-  margin: 40px 0;
-  font-style: italic;
-}
-
-/* Hinweis für "Coming Soon"-Seite */
+/* Hinweis auf "Coming Soon"-Seite */
 .coming-soon {
   font-size: 2rem;
   font-weight: bold;
   color: #81d4fa;
   text-align: center;
-  margin-top: 5vh;
+  margin-top: 4vh;
   margin-bottom: 2vh;
 }
 
-/* === Index-Seite Styles === */
+/* Index-Seite Styles */
 .index-page {
-  background-color: #111;
-  color: #e0e0e0;
-  font-family: Calibri, sans-serif;
+  background-image: url('/images/background_desktop.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem;
   text-align: center;
-  margin-top: auto;
-}
-
-h1 {
-  font-size: 2.5rem;
-  color: #81d4fa;
-  margin: 1rem 0 0.5rem;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin-bottom: 2rem;
-}
-
-.cover-container {
-  margin: 1rem auto;
-  width: 100%;
-  max-width: 500px;
-}
-
-.cover-image {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-}
-
-@media screen and (min-width: 769px) {
-.index-page .disclaimer {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 1rem;
-  border-radius: 8px;
-  margin-top: 2rem;
-  max-width: 600px;
   color: #e0e0e0;
-  font-size: 0.85rem;
-  line-height: 1.5;
-  text-align: center;
-  white-space: nowrap;
-  overflow-x: auto;
-}
-  
-.index-page .disclaimer {
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
-.index-page .disclaimer span {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scroll-left 20s linear infinite;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-}
-  100% {
-    transform: translateX(-100%);
-}
-
-footer .disclaimer {
-  font-size: 0.85rem;
-  color: #999;
-  max-width: 600px;
-  line-height: 1.5;
-  text-align: center;
-  margin: 2rem auto 0 auto;
-}
-
-footer {
-  margin-top: auto;
-}
-
-/* Navigation oben links NUR auf index.html */
+/* Buttons oben links */
 .index-buttons {
   position: absolute;
   top: 1.2rem;
@@ -174,7 +96,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  z-index: 100;
+  z-index: 999;
 }
 
 .index-buttons a {
@@ -191,32 +113,7 @@ footer {
   background-color: #333;
 }
 
-/* === Index-Startbild je nach Bildschirmgröße === */
-.index-page {
-  background-image:("background_desktop.png"); /* Pfad anpassen */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-@media screen and (max-width: 768px) {
-  .index-page {
-    background:("background_mobile.png") no-repeat center center fixed;
-    background-size: cover;
-
-}
-
-/* Text besser lesbar auf Bildhintergrund */
-.index-page h1,
-.index-page .subtitle,
-.index-page #index-buttons,
-.index-page .disclaimer {
-  color: #e0e0e0;
-  text-shadow: 0 0 5px #000;
-
-}
-
+/* Disclaimer Desktop */
 @media screen and (min-width: 769px) {
   .index-page .disclaimer {
     position: fixed;
@@ -237,24 +134,37 @@ footer {
     animation: scroll-left 28s linear infinite;
     padding-left: 100%;
   }
-
-  .index-page footer {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Nur für Mobile: Hinweis unten anpinnen */
-@media (max-width: 768px) {
-  .index-page .disclaimer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 1rem;
-    font-size: 0.7rem;
-    text-align: center;
-    z-index: 20;
+/* Mobile: Statischer Disclaimer */
+@media screen and (max-width: 768px) {
+  .index-page {
+    background-image: url('/images/background_mobile.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
   }
+
+  .index-page .disclaimer {
+    position: static;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    font-size: 0.75rem;
+    text-align: center;
+    color: #e0e0e0;
+  }
+
+  .index-page .disclaimer span {
+    display: block;
+    white-space: normal;
+    animation: none;
+    padding-left: 0;
+  }
+}
+
+/* Animation */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
