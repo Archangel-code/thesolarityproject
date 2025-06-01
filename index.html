@@ -31,117 +31,71 @@
   </p>
   </footer>
 
-<!-- AUDIO PLAYER + UI -->
-<audio id="bg-audio" loop>
-  <source src="Audio/Beach_ambience.mp3" type="audio/mpeg" />
-</audio>
+  <!-- AUDIO PLAYER + UI -->
+  <audio id="bg-audio" loop>
+    <source src="Audio/Beach_ambience.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 
-<div id="audio-controls">
-  <button id="mute-btn" onclick="toggleMute()">🔈</button>
-  <span id="mute-label"></span>
-  <input
-    id="volume-slider"
-    type="range"
-    min="0"
-    max="1"
-    step="0.01"
-    value="1"
-    onchange="setVolume(this.value)"
-  />
-</div>
+  <div id="audio-controls">
+    <button id="mute-btn" onclick="toggleMute()">🔊</button>
+    <span id="mute-label"></span>
+    <input
+      id="volume-slider"
+      type="range"
+      min="0"
+      max="1"
+      step="0.01"
+      value="1"
+      onchange="setVolume(this.value)"
+    />
+  </div>
 
-<style>
-  #audio-controls {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    z-index: 9999;
-    gap: 0.5rem;
-  }
+  <!-- Hinweis Overlay -->
+  <div id="audio-hint">Click anywhere to enable background audio</div>
 
-  #mute-btn {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 8px 12px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
+  <script>
+    const audio = document.getElementById("bg-audio");
+    const muteBtn = document.getElementById("mute-btn");
+    const muteLabel = document.getElementById("mute-label");
+    const volumeSlider = document.getElementById("volume-slider");
+    const hint = document.getElementById("audio-hint");
 
-  #mute-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-  #mute-label {
-    color: white;
-    font-size: 0.9rem;
-    margin-right: 4px;
-  }
-
-  #volume-slider {
-    width: 120px;
-  }
-</style>
-   
-<script>
-  const audio = document.getElementById("bg-audio");
-  const muteBtn = document.getElementById("mute-btn");
-  const muteLabel = document.getElementById("mute-label");
-  const volumeSlider = document.getElementById("volume-slider");
-
-  function toggleMute() {
-    audio.muted = !audio.muted;
-    updateUI();
-  }
-
-  function updateUI() {
-    muteBtn.textContent = audio.muted || audio.volume === 0 ? "🔇" : "🔈";
-    muteLabel.textContent = audio.muted || audio.volume === 0 ? "Muted" : "";
-  }
-
-  function setVolume(val) {
-    const volume = parseFloat(val);
-    audio.volume = volume;
-    audio.muted = volume === 0;
-    updateUI();
-  }
-
-  // Initial UI sync on page load
-let hint;
-
-window.addEventListener("DOMContentLoaded", () => {
-  updateUI();
-  hint = document.getElementById("audio-hint");
-});
-
-  function hideHint() {
-    if (hint && !hint.classList.contains("hidden")) {
-      hint.classList.add("hidden");
+    function toggleMute() {
+      audio.muted = !audio.muted;
+      updateUI();
     }
-  }
 
-  // Versuch Autoplay direkt
-  audio.play().then(() => {
-    hideHint(); // Autoplay funktioniert → Hinweis weg
-  }).catch(() => {
-    // Autoplay blockiert → erst nach Klick ausblenden
-    document.body.addEventListener("click", () => {
-      audio.play();
-      hideHint();
-    }, { once: true });
-  });
-});
-</script>
-   
-<!-- Hinweis-Overlay -->   
-<div id="audio-hint">
-  Click anywhere to enable background audio
-</div>
+    function updateUI() {
+      muteBtn.textContent = audio.muted || audio.volume === 0 ? "🔇" : "🔊";
+      muteLabel.textContent = audio.muted || audio.volume === 0 ? "Muted" : "";
+    }
 
+    function setVolume(val) {
+      const volume = parseFloat(val);
+      audio.volume = volume;
+      audio.muted = volume === 0;
+      updateUI();
+    }
+
+    function hideHint() {
+      if (hint && !hint.classList.contains("hidden")) {
+        hint.classList.add("hidden");
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      updateUI();
+
+      audio.play().then(() => {
+        hideHint(); // Autoplay funktioniert sofort
+      }).catch(() => {
+        document.body.addEventListener("click", () => {
+          audio.play();
+          hideHint(); // Hinweis ausblenden nach manuellem Klick
+        }, { once: true });
+      });
+    });
+  </script>
 </body>
 </html>
