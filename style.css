@@ -44,20 +44,24 @@ span.translation {
   font-style: italic;
 }
 
+/* Übersetzungen direkt unter Inline-Dialog */
 p.translation {
   display: block;
   margin-left: 40px;
-  margin-top: -10px;
+  margin-top: -4px;  /* weniger Abstand nach oben */
+  margin-bottom: 20px;
   font-size: 0.95em;
   font-style: italic;
 }
 
 /* Kommentar-Absätze */
-.comment {
-  display: inline-block;
-  margin-right: 10px;
+span.comment {
+  display: inline;
+  margin-right: 6px;
   font-weight: normal;
-  font-size: 1em;
+  font-style: italic;
+  color: #bbbbbb;
+  font-size: 0.95em;
 }
 
 /* Erzähltext */
