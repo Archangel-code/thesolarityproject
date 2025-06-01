@@ -130,6 +130,13 @@ span.comment {
   transform: translateY(-2px);
 }
 
+.chapter-buttons a.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+  cursor: not-allowed;
+  filter: grayscale(100%);
+}
+
 /* Zusatzklassen */
 .manual-tight { margin-top: -4px !important; }
 .manual-loose { margin-bottom: 24px !important; }
