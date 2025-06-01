@@ -40,8 +40,7 @@ span.spoken {
 }
 
 p.spoken {
-  margin-top: 12px;       /* etwas kompakter als 20px */
-  margin-bottom: 4px;     /* minimaler Abstand vor der Übersetzung */
+  margin-bottom: 2px; /* nur minimaler Abstand vor der Übersetzung */
   font-weight: bold;
 }
 
@@ -53,10 +52,9 @@ span.translation {
 
 /* Übersetzungen direkt unter Inline-Dialog */
 p.translation {
-  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
   margin-left: 40px;
-  margin-top: -4px;  /* weniger Abstand nach oben */
-  margin-bottom: 20px;
   font-size: 0.95em;
   font-style: italic;
 }
