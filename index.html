@@ -34,6 +34,7 @@
 <!-- AUDIO PLAYER + UI -->
 <audio id="bg-audio" autoplay loop>
   <source src="Audio/Beach_ambience.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
 </audio>
 
 <div id="audio-controls">
@@ -111,18 +112,11 @@
     updateUI();
   }
 
- // Initial UI sync + optional fallback autoplay
-window.addEventListener("DOMContentLoaded", () => {
-  updateUI(); // zeigt Icon + Text korrekt an
-
-  // Versuche Autoplay direkt (funktioniert, wenn erlaubt)
-  audio.play().catch(() => {
-    // Falls blockiert, starte bei erstem Klick
-    document.body.addEventListener("click", () => {
-      audio.play();
-    }, { once: true });
+  // Initial UI sync on page load
+  window.addEventListener("DOMContentLoaded", () => {
+    updateUI();
   });
-});
 </script>
+
 </body>
 </html>
