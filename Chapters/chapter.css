@@ -85,6 +85,14 @@ span.comment {
   font-style: normal;
 }
 
+.transition {
+  display: block;
+  text-align: center;
+  color: #bbbbbb;
+  font-style: italic;
+  margin: 3rem 0;
+}
+
 /* Farbklassen für Charaktere */
 .spoken.cortana, .translation.cortana { color: #7dd4fc; }
 .spoken.ahsoka, .translation.ahsoka { color: #f79c2c; }
