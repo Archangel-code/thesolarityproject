@@ -117,6 +117,18 @@ h1 {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
+  
+.index-page .disclaimer {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  max-width: 600px;
+  color: #e0e0e0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: center;
+}
 
 footer .disclaimer {
   font-size: 0.85rem;
@@ -185,15 +197,6 @@ footer {
   color: #e0e0e0;
   text-shadow: 0 0 5px #000;
 
-}
-  
-  .index-page .disclaimer {
-  font-size: 0.85rem;
-  color: #999;
-  margin-top: 2rem;
-  max-width: 600px;
-  line-height: 1.5;
-  text-align: center;
 }
 
 @media (max-width: 768px) {
