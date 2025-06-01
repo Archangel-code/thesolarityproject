@@ -97,16 +97,16 @@
     muteLabel.textContent = audio.muted ? "Muted" : "";
     }
 
-
-    function setVolume(val) {
-      audio.volume = val;
-      if (audio.muted && val > 0) {
-        audio.muted = false;
-        updateMuteUI();
-      }
-    }
-
-    updateMuteUI();
+function setVolume(val) {
+  audio.volume = val;
+  if (val <= 0) {
+    audio.muted = true;
+  } else {
+    audio.muted = false;
+  }
+  updateMuteUI();
+}
+    
   </script>
 
 </body>
