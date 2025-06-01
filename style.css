@@ -64,11 +64,11 @@ p.translation {
 /* Kommentar-Absätze */
 span.comment {
   display: inline;
-  margin-right: 6px;
   font-weight: normal;
-  font-style: italic;
-  color: #bbbbbb;
-  font-size: 0.95em;
+  font-style: normal;
+  color: inherit;
+  font-size: inherit;
+  margin-right: 0;
 }
 
 /* Erzähltext */
