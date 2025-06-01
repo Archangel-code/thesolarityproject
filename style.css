@@ -222,7 +222,7 @@ span.comment {
   100% { transform: translateX(-100%); }
  }
 
-/* === Manuelle Stilklassen zur gezielten Positionierung === */
+/* === Manuelle Stilklassen zur gezielten Positionierung === */    /* === style="margin-EXAMPLE: 00px === */
 .manual-tight {
   margin-top: -4px !important;
  }
