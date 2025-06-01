@@ -215,6 +215,12 @@ footer {
   line-height: 1.5;
 }
 
+.index-page footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* Nur für Mobile: Hinweis unten anpinnen */
 @media (max-width: 768px) {
   .index-page .disclaimer {
