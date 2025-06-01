@@ -148,10 +148,10 @@ h1 {
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
-  }
+}
   100% {
     transform: translateX(-100%);
-  }
+}
 
 footer .disclaimer {
   font-size: 0.85rem;
@@ -226,7 +226,7 @@ footer {
     padding: 1rem;
     font-size: 0.7rem;
     z-index: 20;
-  }
+}
 
   .index-page footer {
   background-color: rgba(0, 0, 0, 0.6);
@@ -261,4 +261,3 @@ footer {
     z-index: 20;
   }
 }
-
