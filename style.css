@@ -88,9 +88,8 @@ h1, h2 {
   color: #e0e0e0;
 }
 
-  /* === Einheitliches Button-Design für Index & Kapitel === */
-.index-buttons,
-.chapter-buttons {
+  /* === Einheitliches Button-Design für Index === */
+.index-buttons {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -100,8 +99,7 @@ h1, h2 {
   z-index: 100;
  }
 
-.index-buttons a,
-.chapter-buttons a {
+.index-buttons a {
   background-color: rgba(0, 0, 0, 0.6);
   color: #ffffff;
   padding: 10px 16px;
@@ -114,11 +112,40 @@ h1, h2 {
   transition: background 0.3s ease, transform 0.2s ease;
  }
 
-.index-buttons a:hover,
-.chapter-buttons a:hover {
+.index-buttons a:hover {
   background-color: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
  }
+
+/* Kapitel-Seite: Navigationsbuttons unten nebeneinander, mittlerer Home-Button */
+.chapter-buttons {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.chapter-buttons a {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease, transform 0.2s ease;
+  min-width: 120px;
+  text-align: center;
+}
+
+.chapter-buttons a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
 
 /* Disclaimer Desktop */
 @media screen and (min-width: 769px) {
