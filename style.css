@@ -193,7 +193,7 @@ footer {
 
 /* === Index-Startbild je nach Bildschirmgröße === */
 .index-page {
-  background-image: url("background_desktop.png"); /* Pfad anpassen */
+  background-image:("background_desktop.png"); /* Pfad anpassen */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -202,7 +202,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   .index-page {
-    background: url("background_mobile.png") no-repeat center center fixed;
+    background:("background_mobile.png") no-repeat center center fixed;
     background-size: cover;
 
 }
@@ -242,19 +242,6 @@ footer {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-  
-/* Standarddarstellung: Hinweis normal unten */
-.index-page .disclaimer {
-  position: static;
-  background-color: transparent;
-  padding: 0;
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 0.85rem;
-  color: #999;
-  max-width: 600px;
-  line-height: 1.5;
 }
 
 /* Nur für Mobile: Hinweis unten anpinnen */
