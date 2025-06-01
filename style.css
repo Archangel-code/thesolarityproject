@@ -130,8 +130,16 @@ h1 {
   line-height: 1.5;
   text-align: center;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-x: auto;
+}
+  
+  .index-page .disclaimer::-webkit-scrollbar {
+  height: 4px;
+}
+
+.index-page .disclaimer::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
 }
 
 footer .disclaimer {
