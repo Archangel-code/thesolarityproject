@@ -25,18 +25,29 @@ h1, h2 {
 }
 
 /* Gesprochener Text */
-.spoken, .translation {
+p.spoken, p.translation {
   display: block;
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 12px;
 }
 
-/* Übersetzung */
-.translation {
-  color: #90ee90; /* Hellgrün */
-  margin-top: -10px;
+/* Inline-Span-Varianten (z. B. nach Kommentar) */
+span.spoken {
+  display: inline;
+  font-weight: bold;
+}
+
+/* Übersetzung inline oder block, je nach Struktur */
+span.translation {
+  display: inline;
+  font-style: italic;
+}
+
+p.translation {
+  display: block;
   margin-left: 40px;
+  margin-top: -10px;
   font-size: 0.95em;
   font-style: italic;
 }
