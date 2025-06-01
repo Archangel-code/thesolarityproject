@@ -127,6 +127,12 @@ footer .disclaimer {
   margin: 2rem auto 0 auto;
 }
 
+.index-page footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 footer {
   margin-top: auto;
 }
