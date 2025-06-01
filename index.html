@@ -31,84 +31,92 @@
   </p>
   </footer>
 
-  <!-- AUDIO PLAYER + MUTE BUTTON + VOLUME CONTROL -->
-  <audio id="bg-audio" autoplay loop>
-    <source src="The Sound of Water.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+<!-- AUDIO PLAYER + UI -->
+<audio id="bg-audio" autoplay loop>
+  <source src="sounds/waves.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
 
-  <div id="audio-controls">
-    <button id="mute-btn" onclick="toggleMute()">🔇</button>
-    <span id="mute-label"></span>
-    <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="1" onchange="setVolume(this.value)">
-  </div>
+<div id="audio-controls">
+  <button id="mute-btn" onclick="toggleMute()">🔈</button>
+  <span id="mute-label"></span>
+  <input
+    id="volume-slider"
+    type="range"
+    min="0"
+    max="1"
+    step="0.01"
+    value="1"
+    onchange="setVolume(this.value)"
+  />
+</div>
 
-  <style>
-    #audio-controls {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      z-index: 9999;
-      gap: 0.5rem;
-    }
-
-    #mute-btn {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 8px 12px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    #mute-btn:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    #mute-label {
-      color: white;
-      font-size: 0.9rem;
-      margin-right: 4px;
-    }
-
-    #volume-slider {
-      width: 120px;
-    }
-    
-  </style>
-
-  <script>
-    const audio = document.getElementById("bg-audio");
-    const muteBtn = document.getElementById("mute-btn");
-    const muteLabel = document.getElementById("mute-label");
-    const volumeSlider = document.getElementById("volume-slider");
-
-    function toggleMute() {
-      audio.muted = !audio.muted;
-      updateMuteUI();
-    }
-
-   function updateMuteUI() {
-    muteBtn.textContent = audio.muted ? "🔇" : "🔈";
-    muteLabel.textContent = audio.muted ? "Muted" : "";
-    }
-
-function setVolume(val) {
-  audio.volume = val;
-  if (val <= 0) {
-    audio.muted = true;
-  } else {
-    audio.muted = false;
+<style>
+  #audio-controls {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 9999;
+    gap: 0.5rem;
   }
-  updateMuteUI();
-}
-    
-  </script>
+
+  #mute-btn {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  #mute-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  #mute-label {
+    color: white;
+    font-size: 0.9rem;
+    margin-right: 4px;
+  }
+
+  #volume-slider {
+    width: 120px;
+  }
+</style>
+
+<script>
+  const audio = document.getElementById("bg-audio");
+  const muteBtn = document.getElementById("mute-btn");
+  const muteLabel = document.getElementById("mute-label");
+  const volumeSlider = document.getElementById("volume-slider");
+
+  function toggleMute() {
+    audio.muted = !audio.muted;
+    updateUI();
+  }
+
+  function updateUI() {
+    muteBtn.textContent = audio.muted || audio.volume === 0 ? "🔇" : "🔈";
+    muteLabel.textContent = audio.muted || audio.volume === 0 ? "Muted" : "";
+  }
+
+  function setVolume(val) {
+    const volume = parseFloat(val);
+    audio.volume = volume;
+    audio.muted = volume === 0;
+    updateUI();
+  }
+
+  // Initial UI sync on page load
+  window.addEventListener("DOMContentLoaded", () => {
+    updateUI();
+  });
+</script>
 
 </body>
 </html>
