@@ -59,6 +59,11 @@ p.translation {
   font-style: italic;
 }
 
+/* Manuelle Feinjustierung einzelner Übersetzungszeilen */
+.manual-tight {
+  margin-top: -4px !important;
+}
+
 /* Kommentar-Absätze */
 span.comment {
   display: inline;
