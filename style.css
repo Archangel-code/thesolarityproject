@@ -196,4 +196,32 @@ footer .disclaimer {
     font-size: 0.7rem;
     z-index: 20;
   }
+  
+/* Standarddarstellung: Hinweis normal unten */
+.index-page .disclaimer {
+  position: static;
+  background-color: transparent;
+  padding: 0;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #999;
+  max-width: 600px;
+  line-height: 1.5;
 }
+
+/* Nur für Mobile: Hinweis unten anpinnen */
+@media (max-width: 768px) {
+  .index-page .disclaimer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    font-size: 0.7rem;
+    text-align: center;
+    z-index: 20;
+  }
+}
+
