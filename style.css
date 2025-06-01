@@ -58,7 +58,7 @@ h1, h2 {
 /* Charakterfarben */
 .spoken.cortana, .translation.cortana { color: #7dd4fc; }
 .spoken.ahsoka, .translation.ahsoka { color: #f79c2c; }
-.spoken_philipp, .translation.philipp { color: #5b85fa; }
+.spoken.philipp, .translation.philipp { color: #5b85fa; }
 .spoken.friendly, .translation.friendly { color: #00bb96; }
 .spoken.enemy, .translation.enemy { color: #ff0000; }
 
