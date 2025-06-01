@@ -119,7 +119,7 @@ span.comment {
 
 /* Index-Seite Styles */
 .index-page {
-  background-image: url('background_desktop.png');
+  background-image: url('Pictures/background_desktop.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -218,7 +218,7 @@ span.comment {
 /* Mobile: Statischer Disclaimer */
 @media screen and (max-width: 768px) {
   .index-page {
-    background-image: url('background_mobile.png');
+    background-image: url('Pictures/background_mobile.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
