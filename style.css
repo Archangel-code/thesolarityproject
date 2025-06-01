@@ -117,7 +117,8 @@ h1 {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
-  
+
+@media screen and (min-width: 769px) {
 .index-page .disclaimer {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem;
@@ -128,6 +129,9 @@ h1 {
   font-size: 0.85rem;
   line-height: 1.5;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 footer .disclaimer {
