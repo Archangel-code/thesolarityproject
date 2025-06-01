@@ -31,25 +31,17 @@
   </p>
   </footer>
 
-  <!-- AUDIO PLAYER + UI -->
-  <audio id="bg-audio" loop>
-    <source src="Audio/Beach_ambience.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
-  </audio>
+<!-- AUDIO PLAYER + UI -->
+<audio id="bg-audio" loop>
+  <source src="Audio/Beach_ambience.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
 
-  <div id="audio-controls">
-    <button id="mute-btn" onclick="toggleMute()">🔊</button>
-    <span id="mute-label"></span>
-    <input
-      id="volume-slider"
-      type="range"
-      min="0"
-      max="1"
-      step="0.01"
-      value="1"
-      onchange="setVolume(this.value)"
-    />
-  </div>
+<div id="audio-controls">
+  <button id="mute-btn" onclick="toggleMute()">🔊</button>
+  <span id="mute-label"></span>
+  <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="1" onchange="setVolume(this.value)" />
+</div>
 
   <!-- Hinweis Overlay -->
   <div id="audio-hint">Click anywhere to enable background audio</div>
