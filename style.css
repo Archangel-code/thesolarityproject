@@ -59,9 +59,14 @@ p.translation {
   font-style: italic;
 }
 
-/* Manuelle Feinjustierung einzelner Übersetzungszeilen */
+/* Feinjustierung einzelner Übersetzungszeilen */
 .manual-tight {
   margin-top: -4px !important;
+}
+
+.translation-right {
+  text-align: right;
+  margin-top: -4px;
 }
 
 /* Kommentar-Absätze */
