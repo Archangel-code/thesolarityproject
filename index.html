@@ -118,12 +118,20 @@ window.addEventListener("DOMContentLoaded", () => {
   updateUI();
   const hint = document.getElementById("audio-hint");
 
+  function hideHint() {
+    if (hint && !hint.classList.contains("hidden")) {
+      hint.classList.add("hidden");
+    }
+  }
+
+  // Versuch Autoplay direkt
   audio.play().then(() => {
-    if (hint) hint.classList.add("hidden");
+    hideHint(); // Autoplay funktioniert → Hinweis weg
   }).catch(() => {
+    // Autoplay blockiert → erst nach Klick ausblenden
     document.body.addEventListener("click", () => {
       audio.play();
-      if (hint) hint.classList.add("hidden");
+      hideHint();
     }, { once: true });
   });
 });
