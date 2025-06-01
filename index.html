@@ -112,16 +112,22 @@
   }
 
   // Initial UI sync on page load
-  window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
   updateUI();
+  const hint = document.getElementById("audio-hint");
 
-  audio.play().catch(() => {
+  audio.play().then(() => {
+    if (hint) hint.classList.add("hidden");
+  }).catch(() => {
     document.body.addEventListener("click", () => {
       audio.play();
+      if (hint) hint.classList.add("hidden");
     }, { once: true });
   });
 });
 </script>
 
+<div id="audio-hint">Click anywhere to enable background audio</div>
+   
 </body>
 </html>
