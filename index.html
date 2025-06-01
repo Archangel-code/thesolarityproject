@@ -111,11 +111,30 @@
     updateUI();
   }
 
-  // Initial UI sync on page load
+ // Initial UI sync + optional fallback autoplay
+window.addEventListener("DOMContentLoaded", () => {
+  updateUI(); // zeigt Icon + Text korrekt an
+
+  // Versuche Autoplay direkt (funktioniert, wenn erlaubt)
+  audio.play().catch(() => {
+    // Falls blockiert, starte bei erstem Klick
+    document.body.addEventListener("click", () => {
+      audio.play();
+    }, { once: true });
+  });
+});
+
+<script>
+  // ... deine anderen Funktionen toggleMute(), updateUI(), setVolume()
+
   window.addEventListener("DOMContentLoaded", () => {
     updateUI();
+    audio.play().catch(() => {
+      document.body.addEventListener("click", () => {
+        audio.play();
+      }, { once: true });
+    });
   });
 </script>
-
 </body>
 </html>
