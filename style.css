@@ -32,14 +32,6 @@ p.spoken, p.translation {
   margin-left: 40px;
 }
 
-/* Übersetzung unter einem Inline-Dialog */
-span.spoken + p.translation,
-p:has(span.spoken) + p.translation {
-  margin-left: 0;
-  margin-top: 2px;
-  margin-bottom: 16px;
-}
-
 /* Inline-Span-Varianten (z. B. nach Kommentar) */
 span.spoken {
   display: inline;
