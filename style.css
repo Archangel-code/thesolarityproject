@@ -91,6 +91,7 @@ h1, h2 {
   align-items: center;
   padding: 2rem 1rem;
   text-align: center;
+  margin-top: auto;
 }
 
 h1 {
@@ -120,10 +121,14 @@ h1 {
 footer .disclaimer {
   font-size: 0.85rem;
   color: #999;
-  margin-top: 2rem;
   max-width: 600px;
   line-height: 1.5;
   text-align: center;
+  margin: 2rem auto 0 auto;
+}
+
+footer {
+  margin-top: auto;
 }
 
 /* Navigation oben links NUR auf index.html */
