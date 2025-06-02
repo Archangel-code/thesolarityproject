@@ -88,7 +88,6 @@ p.translation {
   font-style: italic;
 
   display: block;
-  overflow-wrap: anywhere;
   word-wrap: break-word;
   white-space: normal;
 }
