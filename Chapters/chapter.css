@@ -31,15 +31,6 @@ h3 {
   font-size: 2.5rem;
 }
 
-@media screen and (min-width: 769px) {
-  h1 {
-    font-size: 3.5rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-}
-
 /* Kapitel-Titel */
 .chapter-title {
   font-size: 2.2rem;
@@ -47,6 +38,15 @@ h3 {
   text-align: center;
   margin-top: 60px;
   margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: normal;
+  margin-top: -20px;
+  margin-bottom: 40px;
+  color: #ccc;
 }
 
 /* Coming-Soon Hinweis */
@@ -130,15 +130,15 @@ span.comment {
 .chapter-buttons a {
   background-color: rgba(0, 0, 0, 0.6);
   color: #ffffff;
-  padding: 10px 16px;
+  padding: 8px 14px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(4px);
   transition: background 0.3s ease, transform 0.2s ease;
-  min-width: 120px;
+  min-width: 100px;
   text-align: center;
 }
 
