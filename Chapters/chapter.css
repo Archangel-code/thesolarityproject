@@ -86,10 +86,10 @@ p.translation {
   margin-left: 0;
   font-size: 0.95em;
   font-style: italic;
-
   display: block;
-  word-wrap: break-word;
   white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 span.comment {
