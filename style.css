@@ -163,3 +163,49 @@ body {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
+
+/* Mobile Optimierung Indexseite */
+@media screen and (max-width: 768px) {
+  /* Schrift unter Solarity verkleinern */
+  .subtitle {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Disclaimer wie am Desktop */
+  .index-page .disclaimer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    color: #e0e0e0;
+    font-size: 0.8rem;
+    z-index: 99;
+    overflow: hidden;
+  }
+
+  .index-page .disclaimer span {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 28s linear infinite;
+    padding-left: 100%;
+  }
+
+  /* Buttons kleiner */
+  .index-buttons a {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  #mute-btn {
+    padding: 6px 10px;
+    font-size: 1rem;
+  }
+
+  #volume-slider {
+    width: 100px;
+  }
+}
+
