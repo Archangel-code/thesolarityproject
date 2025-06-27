@@ -175,7 +175,10 @@ span.comment {
     max-width: 90%;
     margin: 2rem auto;
     padding: 1rem;
-  }
+ html, body {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
 
   .chapter-buttons {
     flex-direction: row;
@@ -183,12 +186,10 @@ span.comment {
   }
 
   /* Größere und zentrierte Überschriften */
-  .chapter-container h3,
-  .chapter-container p.coming-soon {
-    text-align: center;
-    font-size: 1.8rem;
-    margin: 2rem 0;
-  }
+.chapter-container h3,
+.chapter-container p.coming-soon {
+  font-size: 1.3rem;
+}
 
   /* Einheitliche Textstruktur für in Dialoge eingebettete Texte */
   p.spoken, span.spoken,
