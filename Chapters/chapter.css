@@ -169,3 +169,32 @@ span.comment {
 .manual-small { font-size: 0.85em !important; opacity: 0.85; }
 .manual-large { font-size: 1.15em !important; font-weight: bold; }
 
+@media screen and (max-width: 768px) {
+  /* Für alle mobilen Geräte */
+
+  p.translation,
+  span.translation {
+    display: inline !important;
+    white-space: normal !important;
+    word-wrap: normal !important;
+    font-size: inherit !important;
+  }
+
+  /* Optional: zentriere auch Transitions */
+  .transition {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #888;
+  }
+
+  /* Falls Buttons verschoben waren */
+  .chapter-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .chapter-buttons a {
+    min-width: 120px;
+  }
+}
