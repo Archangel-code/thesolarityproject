@@ -169,43 +169,63 @@ span.comment {
 .manual-small { font-size: 0.85em !important; opacity: 0.85; }
 .manual-large { font-size: 1.15em !important; font-weight: bold; }
 
-/* Mobile-Styles für Kapitelseiten */
+/* Mobile-spezifische Kapitel-Styles */
 @media screen and (max-width: 768px) {
-  .chapter-container {
-    max-width: 90%;
-    margin: 2rem auto;
-    padding: 1rem;
- html, body {
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-  .chapter-buttons {
-    flex-direction: row;
-    justify-content: space-around;
+  html, body {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    padding: 0 1rem;
   }
 
-  /* Größere und zentrierte Überschriften */
-.chapter-container h3,
-.chapter-container p.coming-soon {
-  font-size: 1.3rem;
-}
+  .chapter-container {
+    max-width: 100% !important;
+    margin: 1rem auto !important;
+    padding: 0 !important;
+  }
 
-  /* Einheitliche Textstruktur für in Dialoge eingebettete Texte */
+  /* Titel und Coming-Soon zentrieren */
+  .chapter-container h3,
+  .chapter-container p.coming‑soon {
+    text-align: center !important;
+    font-size: 1.5rem !important;
+    margin: 1.5rem 0 !important;
+  }
+
+  /* Dialogtexte (gesprochene Zeilen und Übersetzungen) */
   p.spoken, span.spoken,
   p.translation, span.translation {
-    display: block;
-    width: auto;
-    margin: 0.5rem 0;
-    word-wrap: break-word;
-    font-style: normal;
+    display: block !important;
+    width: auto !important;
+    margin: 0.5rem 0 !important;
+    word-wrap: break-word !important;
+    font-style: normal !important;
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+    opacity: 0.9 !important;
   }
 
-  /* Indentation für Dialogstrukturen */
-  p.spoken { margin-left: 1rem; }
+  p.spoken {
+    margin-left: 1rem !important;
+  }
+
   p.translation {
-    margin-left: 1rem;
-    font-style: italic;
-    opacity: 0.85;
+    margin-left: 1rem !important;
+    font-style: italic !important;
+    opacity: 0.85 !important;
+  }
+
+  /* Kapitel-Navigationsbuttons in Reihe */
+  .chapter-buttons {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    gap: 0.5rem !important;
+    margin: 2rem 0 !important;
+  }
+  .chapter-buttons a {
+    flex: 1 1 auto !important;
+    text-align: center !important;
+    font-size: 0.9rem !important;
+    padding: 0.8rem !important;
   }
 }
