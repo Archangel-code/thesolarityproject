@@ -135,9 +135,11 @@ p.comment {
 }
 
 /* Farbklassen für Charaktere */
-.spoken.cortana, .translation.cortana { color: #7dd4fc; }
+.spoken.cortana, .translation.cortana { color: #6EA0FF; }
 .spoken.ahsoka, .translation.ahsoka { color: #f79c2c; }
-.spoken.philipp, .translation.philipp { color: #5b85fa; }
+.spoken.philipp, .translation.philipp { color: #688393; }
+.spoken.gendo, .translation.gendo { color: #9093d3		; }
+.spoken.god, .translation.god{ color: #8a00c2; }
 .spoken.friendly, .translation.friendly { color: #00bb96; }
 .spoken.enemy, .translation.enemy { color: #ff0000; }
 
