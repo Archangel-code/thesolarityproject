@@ -80,6 +80,11 @@ span.translation {
   font-style: italic;
 }
 
+span.translation.tight {
+  display: inline-block;
+  margin-top: -6px;
+}
+
 p.translation {
   margin-top: 1px;
   margin-bottom: 16px;
@@ -112,6 +117,21 @@ span.comment {
   color: #bbbbbb;
   font-style: italic;
   margin: 3rem 0;
+}
+
+/* Abstand zwischen Kommentar und Dialog minimieren */
+p.comment {
+  margin-bottom: 0.2em !important;
+}
+
+.dialog-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.00em;              /* Ultrakleiner Abstand */
+  margin-left: 0;           /* Links bündig */
+  margin-top: 0;
+  margin-bottom: 0.9em;     /* Leicht nach unten freilassen */
+  align-items: flex-start;  /* Voll linksbündig */
 }
 
 /* Farbklassen für Charaktere */
