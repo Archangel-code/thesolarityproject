@@ -207,5 +207,39 @@ body {
   #volume-slider {
     width: 100px;
   }
+
+  /* Footer Social Media Links */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-icon {
+  color: #cccccc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+.footer-icon:hover {
+  color: white;
+}
+
+.footer-icon.civitai::before {
+  content: "🧠 ";
+}
+
+.footer-icon.twitter::before {
+  content: "🐦 ";
+}
+
+.footer-icon.tensor::before {
+  content: "🧬 ";
+}
+
 }
 
