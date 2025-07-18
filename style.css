@@ -33,43 +33,25 @@ body {
 
 /* Disclaimer Desktop */
 @media screen and (min-width: 769px) {
-  .index-page .disclaimer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 1rem;
-    color: #e0e0e0;
-    font-size: 0.8rem;
-    z-index: 99;
-    overflow: hidden;
-  }
+.index-page footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: padding: 0.2rem 0.5rem 0.4rem 0.5rem;
+  color: #e0e0e0;
+  font-size: 0.8rem;
+  z-index: 99;
+  text-align: center;
+}
+
 
   .index-page .disclaimer span {
     display: inline-block;
     white-space: nowrap;
     animation: scroll-left 28s linear infinite;
     padding-left: 100%;
-  }
-}
-
-/* Mobile Disclaimer */
-@media screen and (max-width: 768px) {
-  .index-page .disclaimer {
-    position: static;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 1rem;
-    font-size: 0.75rem;
-    text-align: center;
-    color: #e0e0e0;
-  }
-
-  .index-page .disclaimer span {
-    display: block;
-    white-space: normal;
-    animation: none;
-    padding-left: 0;
   }
 }
 
@@ -208,36 +190,56 @@ body {
     width: 100px;
   }
 
-  /* Footer Social Media Links */
+}
+
+/* Footer Social Media Links – global für Desktop und Mobile */
+
+.footer-social {
+  position: fixed;
+  bottom: 4.5rem; /* Abstand vom unteren Rand – erhöhe für mehr Abstand */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  z-index: 9999;
+  background: transparent;
+  pointer-events: auto;
+}
+
+.footer-social a {
+  text-decoration: none;
+}
+
+.footer-social i:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
 .footer-links {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 .footer-icon {
-  color: #cccccc;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  color: #ccc;
+  transition: color 0.3s;
+
+}
+.footer-icon.civitai i {
+  color: #1e293b; /* Dunkelblau */
 }
 
-.footer-icon:hover {
-  color: white;
+.footer-icon.twitter i {
+  color: #000000; /* Schwarz */
 }
 
-.footer-icon.civitai::before {
-  content: "🧠 ";
+.footer-icon.tensor i {
+  color: #00b2ff; /* Hellblau */
 }
 
-.footer-icon.twitter::before {
-  content: "🐦 ";
-}
-
-.footer-icon.tensor::before {
-  content: "🧬 ";
-}
+.footer-icon:hover i {
+  color: white; /* Beim Hover weiß */
 }
