@@ -17,7 +17,7 @@ body {
 
 /* Index-spezifisches Hintergrundbild */
 .index-page {
-  background-image: url('Pictures/Main Background/background_desktop.png');
+  background-image: url('Images/Main Background/background_desktop.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -34,7 +34,7 @@ body {
 /* Mobile Hintergrund */
 @media screen and (max-width: 768px) {
   .index-page {
-    background-image: url('Pictures/Main Background/background_mobile.png');
+    background-image: url('Images/Main Background/background_mobile.png');
   }
 }
 
