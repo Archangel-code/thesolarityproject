@@ -139,6 +139,10 @@ p.comment {
 .spoken.ahsoka, .translation.ahsoka { color: #f79c2c; }
 .spoken.philipp, .translation.philipp { color: #688393; }
 .spoken.gendo, .translation.gendo { color: #9093d3; }
+.spoken.misato, .translation.misato { color: #ff4e78; }
+.spoken.holland, .translation.holland { color: #5c9e76; }
+.spoken.morrison, .translation.morrison { color: #4a84c4; }
+.spoken.janeway, .translation.janeway { color: #b4b4ff; }
 .spoken.god, .translation.god{ color: #8a00c2; }
 .spoken.friendly, .translation.friendly { color: #00bb96; }
 .spoken.enemy, .translation.enemy { color: #ff0000; }
