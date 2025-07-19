@@ -17,7 +17,7 @@ body {
 
 /* Index-spezifisches Hintergrundbild */
 .index-page {
-  background-image: url('Pictures/background_desktop.png');
+  background-image: url('Pictures/Main Background/background_desktop.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -34,7 +34,7 @@ body {
 /* Mobile Hintergrund */
 @media screen and (max-width: 768px) {
   .index-page {
-    background-image: url('Pictures/background_mobile.png');
+    background-image: url('Pictures/Main Background/background_mobile.png');
   }
 }
 
@@ -203,50 +203,21 @@ body {
 
 .footer-social {
   position: fixed;
-  bottom: 4.5rem; /* Abstand vom unteren Rand – erhöhe für mehr Abstand */
+  bottom: 4.2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   z-index: 9999;
-  background: transparent;
-  pointer-events: auto;
+  align-items: center;
 }
 
-.footer-social a {
-  text-decoration: none;
+.footer-social a img {
+  height: 28px;
+  width: auto;
+  transition: opacity 0.3s ease;
 }
 
-.footer-social i:hover {
-  opacity: 0.8;
-  transition: opacity 0.3s;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.footer-icon {
-  font-size: 1.5rem;
-  color: #ccc;
-  transition: color 0.3s;
-
-}
-.footer-icon.civitai i {
-  color: #1e293b; /* Dunkelblau */
-}
-
-.footer-icon.twitter i {
-  color: #000000; /* Schwarz */
-}
-
-.footer-icon.tensor i {
-  color: #00b2ff; /* Hellblau */
-}
-
-.footer-icon:hover i {
-  color: white; /* Beim Hover weiß */
+.footer-social a:hover img {
+  opacity: 0.7;
 }
