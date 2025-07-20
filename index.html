@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solarity – Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="index-page">
+
+  <!-- HEADER -->
+  <div class="header-container">
+
+    <!-- Navigation separat -->
+    <div class="nav-button-container custom-position top-left margin-top--2 margin-left--1">
+      <div class="nav-buttons">
+        <a href="Chapters/solarity_chapter1.html">Chapter 1</a>
+        <a href="Chapters/solarity_chapter2.html">Chapter 2</a>
+        <a href="Chapters/solarity_chapter3.html">Chapter 3</a>
+        <a href="Chapters/solarity_chapter4.html">Chapter 4</a>
+        <a href="Chapters/solarity_chapter_coming_soon.html">Chapter 5 (Coming Soon)</a>
+      </div>
+    </div>
+
+    <!-- Titel + Untertitel separat -->
+    <div class="title-container custom-position center-top margin-left-1 margin-top-6">
+      <h1 class="header-title">Solarity</h1>
+      <h2 class="header-subtitle">A multi-layered multiverse Fan Project</h2>
+    </div>
+  </div>
+
+  <!-- MAIN SECTION -->
+  <div class="main-section">
+    <div class="social-links custom-position bottom-right margin-bottom-1-5 margin-right-1">
+      <a href="https://civitai.com/user/Archangel_Ai" target="_blank" title="Check out my LoRa Models on Civitai">
+        <img src="Images/Icons/civitai_icon.png" alt="Civitai" />
+      </a>
+      <a href="https://x.com/Archangel_AiOG" target="_blank" title="Visit my X Profile">
+        <img src="Images/Icons/x_icon.png" alt="X" />
+      </a>
+      <a href="https://www.youtube.com/@Archangel_AiOG" target="_blank" title="Visit my Youtube Channel">
+        <img src="Images/Icons/youtube_icon.png" alt="YouTube" />
+      </a>
+      <a href="https://tensor.art/u/834173157001710894" target="_blank" title="Check out my LoRa Models on Tensor">
+        <img src="Images/Icons/tensorart_icon.png" alt="Tensor" />
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-container">
+    <footer>
+      <p class="footer-disclaimer">
+        <span class="scroll-text">
+          © 2025 thesolarityproject.art — This project is a non-commercial fan-made work. It includes original characters and settings, as well as characters and settings from Star Wars, Halo, and various others works. All rights remain with their respective creators. Solarity by Archangel_Ai.
+        </span>
+      </p>
+    </footer>
+  </div>
+
+  <!-- AUDIO -->
+  <div class="custom-position margin-bottom-2 margin-right-2">
+    <audio id="bg-audio" loop>
+      <source src="Audio/Beach_ambience.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="audio-controls custom-position top-right margin-top-0 margin-right-0">
+    <button id="mute-btn" onclick="toggleMute()">🔊</button>
+    <span id="mute-label"></span>
+    <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="1" onchange="setVolume(this.value)" />
+  </div>
+
+  <div class="audio-hint custom-position bottom-center margin-bottom-10" id="audio-hint">Click anywhere to enable background audio</div>
+
+  <script>
+    const audio = document.getElementById("bg-audio");
+    const muteBtn = document.getElementById("mute-btn");
+    const muteLabel = document.getElementById("mute-label");
+    const volumeSlider = document.getElementById("volume-slider");
+    const hint = document.getElementById("audio-hint");
+
+    function toggleMute() {
+      audio.muted = !audio.muted;
+      updateUI();
+    }
+
+    function updateUI() {
+      muteBtn.textContent = audio.muted || audio.volume === 0 ? "🔇" : "🔊";
+      muteLabel.textContent = audio.muted || audio.volume === 0 ? "Muted" : "";
+    }
+
+    function setVolume(val) {
+      const volume = parseFloat(val);
+      audio.volume = volume;
+      audio.muted = volume === 0;
+      updateUI();
+    }
+
+    function hideHint() {
+      if (hint && !hint.classList.contains("hidden")) {
+        hint.classList.add("hidden");
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      updateUI();
+
+      audio.play().then(() => {
+        hideHint();
+      }).catch(() => {
+        document.body.addEventListener("click", () => {
+          audio.play();
+          hideHint();
+        }, { once: true });
+      });
+    });
+  </script>
+</body>
+</html>
