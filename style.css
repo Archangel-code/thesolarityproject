@@ -289,23 +289,6 @@ body.index-page {
   padding: 2rem;
 }
 
-/* ==================== SOCIAL MEDIA ==================== */
-.social-links {
-  display: flex;
-  gap: 2rem;
-  z-index: 99;
-}
-
-.social-links a img {
-  height: 32px;
-  width: auto;
-  transition: opacity 0.3s ease;
-}
-
-.social-links a:hover img {
-  opacity: 0.7;
-}
-
 /* ==================== FOOTER ==================== */
 .footer-container footer {
   position: fixed;
@@ -328,6 +311,28 @@ body.index-page {
 @keyframes scroll-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
+}
+
+/* ==================== BACK TO WEBSITE ==================== */
+
+.web-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.web-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 /* ==================== AUDIO UI ==================== */
