@@ -94,17 +94,29 @@
       }
     }
 
-    window.addEventListener("DOMContentLoaded", () => {
+    function tryEnsureAudio() {
       updateUI();
-
       audio.play().then(() => {
         hideHint();
       }).catch(() => {
+        // fallback: wait for a user gesture once
         document.body.addEventListener("click", () => {
           audio.play();
           hideHint();
         }, { once: true });
       });
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      tryEnsureAudio();
+    });
+    // Resume on back/forward cache restores
+    window.addEventListener("pageshow", () => {
+      tryEnsureAudio();
+    });
+    // Also resume when tab becomes visible again
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") tryEnsureAudio();
     });
   </script>
 </body>
