@@ -11,6 +11,7 @@ html, body {
 }
 
 /* ==================== PAGE TRANSITIONS ==================== */
+html.js body { opacity: 0; }
 body.fade-enter { opacity: 0; }
 body.fade-enter-active { opacity: 1; transition: opacity 420ms ease; }
 body.fade-exit-active { opacity: 0; transition: opacity 420ms ease; }
