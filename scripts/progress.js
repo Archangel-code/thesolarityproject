@@ -181,6 +181,26 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
+    // First-visit detection and overlay fade if coming from outside the site
+    try {
+      const sessionKey = 'solarity_session_seen';
+      const fromExternal = document.referrer && !(new URL(document.referrer).origin === location.origin);
+      const firstInThisSession = !sessionStorage.getItem(sessionKey);
+      if (fromExternal && firstInThisSession) {
+        const overlay = document.createElement('div');
+        overlay.className = 'solarity-fade-overlay';
+        document.body.appendChild(overlay);
+        // mark session as seen
+        sessionStorage.setItem(sessionKey, '1');
+        // hide overlay after a tick so it fades away, revealing the page
+        requestAnimationFrame(() => {
+          overlay.classList.add('hide');
+          // remove from DOM after transition
+          setTimeout(() => overlay.remove(), 600);
+        });
+      }
+    } catch {}
+
     // Page fade-in
     try {
       document.body.classList.add('fade-enter');
