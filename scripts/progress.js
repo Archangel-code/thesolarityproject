@@ -188,6 +188,11 @@
         document.body.classList.add('fade-enter-active');
         document.body.classList.remove('fade-enter');
       });
+      // Safety: ensure body becomes visible even if classes fail
+      setTimeout(() => {
+        document.body.classList.add('fade-enter-active');
+        document.body.classList.remove('fade-enter');
+      }, 600);
     } catch {}
 
     if (onChapterPage()) {
