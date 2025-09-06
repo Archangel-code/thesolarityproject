@@ -203,6 +203,8 @@
 
     // Page fade-in
     try {
+  // Ensure any stale exit class is removed
+  document.body.classList.remove('fade-exit-active');
       document.body.classList.add('fade-enter');
       requestAnimationFrame(() => {
         document.body.classList.add('fade-enter-active');
@@ -240,5 +242,21 @@
   document.body.classList.add('fade-exit-active');
   setTimeout(() => { location.href = href; }, 380);
     }, true);
+
+    // Handle BFCache back/forward restores to avoid dark page
+    window.addEventListener('pageshow', (event) => {
+      try {
+        document.body.classList.remove('fade-exit-active');
+        if (event.persisted) {
+          // When restored from bfcache, force visible
+          document.body.classList.remove('fade-enter');
+          document.body.classList.add('fade-enter-active');
+        }
+      } catch {}
+    });
+    // Also clear on load as a fallback
+    window.addEventListener('load', () => {
+      try { document.body.classList.remove('fade-exit-active'); } catch {}
+    });
   });
 })();
