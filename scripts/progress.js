@@ -4,6 +4,7 @@
 
 (function () {
   const STORAGE_PREFIX = 'solarity_progress_chapter_';
+  const OVERLAY_ID = 'solarity-fade-overlay';
 
   function clamp(n, min, max) { return Math.max(min, Math.min(max, n)); }
 
@@ -180,42 +181,37 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    // First-visit detection and overlay fade if coming from outside the site
-    try {
-      const sessionKey = 'solarity_session_seen';
-      const fromExternal = document.referrer && !(new URL(document.referrer).origin === location.origin);
-      const firstInThisSession = !sessionStorage.getItem(sessionKey);
-      if (fromExternal && firstInThisSession) {
-        const overlay = document.createElement('div');
-        overlay.className = 'solarity-fade-overlay';
-        document.body.appendChild(overlay);
-        // mark session as seen
-        sessionStorage.setItem(sessionKey, '1');
-        // hide overlay after a tick so it fades away, revealing the page
-        requestAnimationFrame(() => {
-          overlay.classList.add('hide');
-          // remove from DOM after transition
-          setTimeout(() => overlay.remove(), 600);
-        });
-      }
-    } catch {}
+  function getOrCreateOverlay(){
+    let ov = document.getElementById(OVERLAY_ID);
+    if (!ov){
+      ov = document.createElement('div');
+      ov.id = OVERLAY_ID;
+      ov.className = 'solarity-fade-overlay';
+      document.body.appendChild(ov);
+    }
+    return ov;
+  }
 
-    // Page fade-in
-    try {
-  // Ensure any stale exit class is removed
-  document.body.classList.remove('fade-exit-active');
-      document.body.classList.add('fade-enter');
-      requestAnimationFrame(() => {
-        document.body.classList.add('fade-enter-active');
-        document.body.classList.remove('fade-enter');
-      });
-      // Safety: ensure body becomes visible even if classes fail
-      setTimeout(() => {
-        document.body.classList.add('fade-enter-active');
-        document.body.classList.remove('fade-enter');
-      }, 600);
-    } catch {}
+  function fadeInOverlayThenHide() {
+    const ov = getOrCreateOverlay();
+    // Start fully visible, then fade to transparent
+    ov.classList.add('show');
+    requestAnimationFrame(() => {
+      ov.classList.remove('show');
+      setTimeout(() => { /* keep element for reuse */ }, 450);
+    });
+  }
+
+  function fadeOutOverlayThenNavigate(href){
+    const ov = getOrCreateOverlay();
+    // Fade to visible (cover page), then navigate
+    ov.classList.add('show');
+    setTimeout(() => { location.href = href; }, 420);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+  // Fade-in overlay on every page load for consistent effect
+  try { fadeInOverlayThenHide(); } catch {}
 
     if (onChapterPage()) {
       mountChapterProgress();
@@ -223,7 +219,7 @@
       annotateIndexLinks();
     }
 
-    // Intercept same-origin navigations for fade-out
+  // Intercept same-origin navigations for overlay fade-out
     document.addEventListener('click', (e) => {
       const a = e.target && (e.target.closest ? e.target.closest('a') : null);
       if (!a) return;
@@ -238,25 +234,16 @@
       if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
 
       e.preventDefault();
-      // apply fade-out
-  document.body.classList.add('fade-exit-active');
-  setTimeout(() => { location.href = href; }, 380);
+      // overlay fade-out
+      fadeOutOverlayThenNavigate(href);
     }, true);
 
-    // Handle BFCache back/forward restores to avoid dark page
-    window.addEventListener('pageshow', (event) => {
+    // Ensure visibility on BFCache restores
+    window.addEventListener('pageshow', () => {
       try {
-        document.body.classList.remove('fade-exit-active');
-        if (event.persisted) {
-          // When restored from bfcache, force visible
-          document.body.classList.remove('fade-enter');
-          document.body.classList.add('fade-enter-active');
-        }
+        const ov = document.getElementById(OVERLAY_ID);
+        if (ov) ov.classList.remove('show');
       } catch {}
-    });
-    // Also clear on load as a fallback
-    window.addEventListener('load', () => {
-      try { document.body.classList.remove('fade-exit-active'); } catch {}
     });
   });
 })();

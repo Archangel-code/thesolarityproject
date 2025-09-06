@@ -12,6 +12,10 @@ body.fade-enter { opacity: 0; }
 body.fade-enter-active { opacity: 1; transition: opacity 420ms ease; }
 body.fade-exit-active { opacity: 0; transition: opacity 420ms ease; }
 
+/* First-visit overlay fade */
+.solarity-fade-overlay{position:fixed;inset:0;background:#111;z-index:100000;opacity:0;pointer-events:none;transition:opacity 420ms ease}
+.solarity-fade-overlay.show{opacity:1}
+
 .chapter-container {
   max-width: 900px;
   margin: 40px auto;
