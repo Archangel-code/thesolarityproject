@@ -181,10 +181,39 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
+    // Page fade-in
+    try {
+      document.body.classList.add('fade-enter');
+      requestAnimationFrame(() => {
+        document.body.classList.add('fade-enter-active');
+        document.body.classList.remove('fade-enter');
+      });
+    } catch {}
+
     if (onChapterPage()) {
       mountChapterProgress();
     } else {
       annotateIndexLinks();
     }
+
+    // Intercept same-origin navigations for fade-out
+    document.addEventListener('click', (e) => {
+      const a = e.target && (e.target.closest ? e.target.closest('a') : null);
+      if (!a) return;
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('#') || a.target === '_blank') return;
+      try {
+        const url = new URL(href, location.href);
+        if (url.origin !== location.origin) return; // external
+      } catch { return; }
+
+      // allow modifier/middle clicks to proceed normally
+      if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+
+      e.preventDefault();
+      // apply fade-out
+  document.body.classList.add('fade-exit-active');
+  setTimeout(() => { location.href = href; }, 380);
+    }, true);
   });
 })();

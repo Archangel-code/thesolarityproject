@@ -10,6 +10,11 @@ html, body {
   line-height: 1.6;
 }
 
+/* ==================== PAGE TRANSITIONS ==================== */
+body.fade-enter { opacity: 0; }
+body.fade-enter-active { opacity: 1; transition: opacity 420ms ease; }
+body.fade-exit-active { opacity: 0; transition: opacity 420ms ease; }
+
 /* ==================== POSITIONING FLEXIBILITY ==================== */
 .custom-position {
   position: absolute;
